@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINEBREAK MEDIA | The Stories Behind The Sport</title>
+<meta name="description" content="Professional sports journalism, digital content and freelance media services for clubs and publications.">
+<style>
+:root {
+  --navy: #071a33;
+  --blue: #12365c;
+  --gold: #d4a94f;
+  --white: #ffffff;
+  --light: #f2f5f8;
+  --text: #17283d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+}
+a { text-decoration: none; color: inherit; }
+header {
+  background: var(--navy);
+  color: white;
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.logo { font-size: 27px; font-weight: 900; letter-spacing: 2px; }
+.logo span { color: var(--gold); }
+nav { display: flex; flex-wrap: wrap; gap: 19px; }
+nav a {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+nav a:hover { color: var(--gold); }
+.hero {
+  background: linear-gradient(120deg, #071a33, #173c63);
+  color: white;
+  text-align: center;
+  padding: 110px 20px 120px;
+}
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.hero h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+.hero h2 {
+  font-size: clamp(18px, 3vw, 27px);
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+.hero p {
+  max-width: 650px;
+  margin: 30px auto;
+  color: #dce5ef;
+}
+.button {
+  display: inline-block;
+  padding: 13px 25px;
+  margin: 8px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.button.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+}
+.section {
+  padding: 75px 7%;
+  text-align: center;
+}
+.section h2 {
+  color: var(--navy);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.section-intro {
+  max-width: 750px;
+  margin: 0 auto 35px;
+}
+.gold-line {
+  width: 55px;
+  height: 3px;
+  background: var(--gold);
+  margin: 18px auto 25px;
+}
+.divisions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+  text-align: left;
+}
+.division {
+  background: var(--navy);
+  color: white;
+  padding: 45px 35px;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.division.press { background: var(--blue); }
+.division .number {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+.division h3 {
+  font-size: 29px;
+  margin: 15px 0;
+  letter-spacing: 1px;
+}
+.division p { color: #dce5ef; margin-bottom: 25px; }
+.division .button { margin: auto 0 0; }
+.founding {
+  background: var(--light);
+}
+.founding-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 950px;
+  margin: 35px auto 0;
+}
+.offer {
+  background: white;
+  padding: 35px 25px;
+  border-top: 4px solid var(--gold);
+}
+.offer h3 { color: var(--navy); margin: 12px 0; }
+.offer strong {
+  display: block;
+  color: var(--blue);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.offer p { margin: 15px 0; }
+.contact {
+  background: var(--navy);
+  color: white;
+}
+.contact h2 { color: white; }
+.contact p { color: #dce5ef; }
+.contact a { color: var(--gold); }
+.contact-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 35px;
+}
+.contact-details h3 {
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+footer {
+  background: #041225;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+footer .logo { font-size: 22px; }
+footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
+@media(max-width: 800px) {
+  header { justify-content: center; text-align: center; }
+  nav { justify-content: center; gap: 12px; }
+  nav a { font-size: 10px; }
+  .divisions, .founding-grid { grid-template-columns: 1fr; }
+  .hero { padding: 75px 20px; }
+  .section { padding: 55px 6%; }
+  .contact-details { gap: 30px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">LINEBREAK<span>.</span>MEDIA</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="linebreak-club.html">Club</a>
+    <a href="linebreak-press.html">Press</a>
+    <a href="network.html">Join Network</a>
+    <a href="academy.html">Training Academy</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="enquiries.html">Enquiries</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">ESTABLISHED 2026</div>
+  <h1>LINEBREAK MEDIA</h1>
+  <h2>THE STORIES BEHIND THE SPORT.</h2>
+  <p>Professional sports journalism, digital content production and freelance media services connecting clubs, publications and sporting communities.</p>
+  <a href="linebreak-club.html" class="button">Explore Linebreak Club</a>
+  <a href="linebreak-press.html" class="button outline">Explore Linebreak Press</a>
+</section>
+
+<section class="section">
+  <h2>TWO DIVISIONS. ONE CENTRAL OPERATION.</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">Two specialist divisions. One shared passion for sport and storytelling. Linebreak Media brings together professional sports journalism, creative content and an international network of freelance talent.</p>
+
+  <div class="divisions">
+    <div class="division">
+      <span class="number">01 / FOR SPORTS CLUBS</span>
+      <h3>LINEBREAK CLUB</h3>
+      <strong>YOUR CLUB ALREADY HAS A STORY. WE MAKE SURE PEOPLE HEAR IT.</strong>
+      <p>Professional sports journalism, digital content production and social media management for clubs looking to grow their profile and engage supporters.</p>
+      <a href="linebreak-club.html" class="button">Explore Linebreak Club</a>
+    </div>
+    <div class="division press">
+      <span class="number">02 / FOR PUBLICATIONS</span>
+      <h3>LINEBREAK PRESS</h3>
+      <strong>CONNECTING PUBLICATIONS WITH JOURNALISTS WHO KNOW YOUR SPORT.</strong>
+      <p>A managed network of freelance sports journalists, photographers and content creators, connecting publications with reliable coverage across multiple sports and locations.</p>
+      <a href="linebreak-press.html" class="button">Explore Linebreak Press</a>
+    </div>
+  </div>
+</section>
+
+<section class="section founding">
+  <h2>BECOME A FOUNDING PARTNER</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">Help us build something from the ground up. Join the first clubs and publications to become part of the Linebreak Media network.</p>
+
+  <div class="founding-grid">
+    <div class="offer">
+      <strong>LINEBREAK CLUB</strong>
+      <h3>10 FOUNDING CLUB PLACES</h3>
+      <p>Receive approximately 10% off monthly packages for your first month, plus access to a special £50 first one-off booking offer.</p>
+      <a href="pricing.html" class="button">Explore Club Pricing</a>
+    </div>
+    <div class="offer">
+      <strong>LINEBREAK PRESS</strong>
+      <h3>10 FOUNDING PUBLICATION PLACES</h3>
+      <p>Receive 50% off Linebreak's agency fee on your first completed assignment.</p>
+      <a href="pricing.html" class="button">Explore Press Pricing</a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact">
+  <h2>GET IN TOUCH WITH LINEBREAK MEDIA</h2>
+  <div class="gold-line"></div>
+  <p>Stay connected with Linebreak Media for updates, new opportunities and the latest developments.</p>
+
+  <div class="contact-details">
+    <div>
+      <h3>EMAIL ENQUIRIES</h3>
+      <a href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+    </div>
+    <div>
+      <h3>INSTAGRAM</h3>
+      <p>COMING SOON</p>
+    </div>
+    <div>
+      <h3>X</h3>
+      <a href="https://x.com/TomSansomSport" target="_blank">@TomSansomSport</a>
+    </div>
+    <div>
+      <h3>PHONE ENQUIRIES</h3>
+      <p>UK: +44 (0) 7546 450845</p>
+      <p>IRELAND: +353 (0) 83 882 2024</p>
+    </div>
+  </div>
+  <br>
+  <a href="enquiries.html" class="button">All Enquiries</a>
+</section>
+
+<footer>
+  <div class="logo">LINEBREAK<span>.</span>MEDIA</div>
+  <p>THE STORIES BEHIND THE SPORT.</p>
+  <p>© 2026 Linebreak Media. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
