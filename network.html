@@ -1,1 +1,428 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Linebreak Network | Linebreak Media</title>
+  <meta name="description" content="Join the Linebreak Media network of freelance sports journalists, photographers and content creators.">
+
+  <style>
+    :root {
+      --navy: #101d32;
+      --navy-light: #192b46;
+      --gold: #d5ad57;
+      --white: #ffffff;
+      --light: #f4f5f7;
+      --text: #283447;
+      --muted: #667085;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--white);
+      padding: 16px 5%;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo img {
+      max-width: 220px;
+      max-height: 70px;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #b58b37;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 75px 20px 80px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    .hero .tagline {
+      color: var(--gold);
+      font-size: clamp(15px, 2.5vw, 21px);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      max-width: 790px;
+      margin: 0 auto 15px;
+      font-size: 17px;
+      color: #e5e9ef;
+    }
+
+    .notice {
+      max-width: 790px;
+      margin: 28px auto 0;
+      padding: 17px 20px;
+      border: 1px solid rgba(213, 173, 87, 0.65);
+      color: #f0e5cc;
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 70px 20px;
+    }
+
+    .section-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: var(--navy);
+      font-size: clamp(26px, 4vw, 36px);
+      line-height: 1.2;
+      margin-bottom: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    .section h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin: 32px 0 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .section p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 4px;
+      background: var(--gold);
+      margin: 0 0 28px;
+    }
+
+    .looking {
+      background: var(--light);
+    }
+
+    .looking ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .looking li {
+      position: relative;
+      padding: 12px 10px 12px 35px;
+      border-bottom: 1px solid #dfe3e8;
+      font-size: 16px;
+    }
+
+    .looking li::before {
+      content: "◆";
+      color: var(--gold);
+      position: absolute;
+      left: 8px;
+      top: 13px;
+      font-size: 12px;
+    }
+
+    .photo-section {
+      padding: 0;
+      background: var(--navy);
+    }
+
+    .photo-section img {
+      display: block;
+      width: 100%;
+      max-height: 560px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .photo-caption {
+      max-width: 1000px;
+      margin: auto;
+      padding: 15px 20px;
+      color: #dce3ed;
+      font-size: 12px;
+      text-align: right;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .how-to {
+      background: var(--white);
+    }
+
+    .email-highlight {
+      display: inline-block;
+      margin: 5px 0 20px;
+      padding: 12px 18px;
+      background: var(--navy);
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .email-highlight:hover {
+      background: var(--navy-light);
+    }
+
+    .details-list {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .details-list li {
+      padding: 17px 0;
+      border-bottom: 1px solid #e3e6eb;
+    }
+
+    .details-list strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+      letter-spacing: 0.3px;
+    }
+
+    .closing {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .closing h2 {
+      color: var(--white);
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 22px;
+    }
+
+    .closing .gold-line {
+      margin: 0 auto 28px;
+    }
+
+    .closing p {
+      max-width: 790px;
+      margin: 0 auto 17px;
+      color: #e5e9ef;
+      font-size: 16px;
+    }
+
+    .closing a {
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .closing a:hover {
+      text-decoration: underline;
+    }
+
+    .closing .disclaimer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #c2cad6;
+    }
+
+    footer {
+      background: #091322;
+      color: #c2cad6;
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px 16px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo img {
+        max-width: 190px;
+      }
+
+      .hero {
+        padding: 55px 20px;
+      }
+
+      .section {
+        padding: 55px 20px;
+      }
+
+      .photo-section img {
+        max-height: 390px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="linebreak-club.html">Linebreak Club</a>
+        <a href="linebreak-press.html">Linebreak Press</a>
+        <a href="network.html">Join the Network</a>
+        <a href="academy.html">Academy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="enquiries.html">Enquiries</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>JOIN THE LINEBREAK NETWORK</h1>
+    <div class="tagline">YOUR SPORT. YOUR EXPERIENCE. YOUR NEXT OPPORTUNITY.</div>
+
+    <p>Linebreak Media is building an international network of freelance sports journalists, photographers and content creators.</p>
+
+    <p>We're looking to connect with people who understand their sport, know their local sporting communities and want to contribute to professional sports coverage across different publications and platforms.</p>
+
+    <p>Whether you're an experienced freelance journalist, a university student building your portfolio or a content creator with specialist sporting knowledge, we'd like to hear from you.</p>
+
+    <div class="notice">
+      Founding launch phase: expressions of interest will be reviewed as the network develops. Getting in touch does not guarantee paid assignments or immediate work.
+    </div>
+  </section>
+
+  <section class="section looking">
+    <div class="section-inner">
+      <h2>BECOME A FOUNDING CONTRIBUTOR</h2>
+      <div class="gold-line"></div>
+
+      <p>As Linebreak Media enters its launch phase, we're inviting prospective contributors to express their interest in becoming part of our founding network.</p>
+
+      <h3>WE'RE LOOKING FOR</h3>
+
+      <ul>
+        <li>Specialist knowledge of one or more sports.</li>
+        <li>Experience covering local, regional, national or international competitions.</li>
+        <li>Strong writing, photography, video or digital content skills.</li>
+        <li>Knowledge of particular clubs, teams, leagues or sporting communities.</li>
+        <li>An interest in developing their portfolio and taking on freelance opportunities.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="photo-section">
+    <img src="youngjourno.avif" alt="Young sports journalist reporting from a sporting event">
+    <div class="photo-caption">The next generation of sports journalism starts here.</div>
+  </section>
+
+  <section class="section how-to">
+    <div class="section-inner">
+      <h2>HOW TO EXPRESS YOUR INTEREST</h2>
+      <div class="gold-line"></div>
+
+      <p>During the launch phase, prospective contributors should contact Tom Sansom directly by email.</p>
+
+      <p><strong>Email:</strong></p>
+      <a class="email-highlight" href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+
+      <ul class="details-list">
+        <li>
+          <strong>YOUR SPECIALIST SPORTS</strong>
+          Tell us which sports you know and would like to cover.
+        </li>
+        <li>
+          <strong>YOUR LOCATION</strong>
+          Let us know where you're based and which clubs, teams, competitions or geographical areas you could cover.
+        </li>
+        <li>
+          <strong>YOUR AVAILABILITY</strong>
+          Explain when you're available and whether you can attend events, matches or competitions in person.
+        </li>
+        <li>
+          <strong>YOUR PREVIOUS WORK</strong>
+          Include links to published articles, photography portfolios, videos or other examples of your work. Attachments are also welcome.
+        </li>
+        <li>
+          <strong>A LITTLE ABOUT YOURSELF</strong>
+          Introduce yourself and explain why you'd like to become part of Linebreak Media.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="closing">
+    <h2>YOUR NETWORK. YOUR OPPORTUNITIES.</h2>
+    <div class="gold-line"></div>
+
+    <p>We're building Linebreak Media from the ground up, and we want knowledgeable, enthusiastic contributors to help shape its future. If you're interested in becoming one of our founding contributors, send Tom an email and introduce yourself at <a href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>.</p>
+
+    <p class="disclaimer">Expressions of interest will be reviewed as the founding network develops. Getting in touch does not guarantee paid assignments or immediate work.</p>
+  </section>
+
+  <footer>
+    © 2026 Linebreak Media. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
