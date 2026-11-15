@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Linebreak Press | The Stories Behind the Sport</title>
   <meta name="description" content="Connecting sports publications with reliable freelance journalists, photographers and content creators.">
-  
+
   <style>
     :root {
       --navy: #101d35;
@@ -167,6 +168,49 @@
       margin: 35px auto;
     }
 
+    /* WHO WE WORK WITH */
+
+    .press-outlets {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      text-align: left;
+    }
+
+    .press-outlet {
+      background: white;
+      border-top: 4px solid var(--gold);
+      padding: 18px;
+      min-width: 0;
+    }
+
+    .press-outlet img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .press-outlet h3 {
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.35;
+      margin-bottom: 10px;
+      letter-spacing: .3px;
+    }
+
+    .press-outlet p {
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* PRESS BOX CARDS */
+
     .press-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -290,6 +334,12 @@
       color: #cbd3df;
     }
 
+    @media (max-width: 1000px) {
+      .press-outlets {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 800px) {
       header {
         justify-content: center;
@@ -317,6 +367,16 @@
         padding: 65px 20px;
       }
     }
+
+    @media (max-width: 520px) {
+      .press-outlets {
+        grid-template-columns: 1fr;
+      }
+
+      .press-outlet img {
+        height: 230px;
+      }
+    }
   </style>
 </head>
 
@@ -326,7 +386,6 @@
   <a href="index.html" class="logo">
     <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
   </a>
-
   <nav>
     <a href="index.html">Home</a>
     <a href="linebreak-club.html">Linebreak Club</a>
@@ -366,6 +425,78 @@
     or wider digital content, we help you find the right people to tell
     the stories that matter.
   </p>
+</section>
+
+<!-- WHO WE WORK WITH -->
+
+<section class="section light-section">
+  <h2>WHO WE WORK WITH.</h2>
+  <div class="gold-line"></div>
+
+  <p class="section-intro">
+    From regional newspapers to national publications and digital sports
+    platforms, we connect the right people with the right opportunities
+    to tell stories from across the sporting landscape.
+  </p>
+
+  <div class="press-outlets">
+
+    <div class="press-outlet">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_8b526d30650c4978af5498a3c29c7cbd~mv2.webp/v1/fill/w_363,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="Regional newspaper sports coverage"
+        loading="lazy"
+      >
+      <h3>REGIONAL PAPERS</h3>
+      <p>
+        Connecting regional newspapers with local sports journalists
+        who understand their clubs, communities and competitions.
+      </p>
+    </div>
+
+    <div class="press-outlet">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_abe02b48a08f4811ae9f4957f7cf6003~mv2.webp/v1/fill/w_363,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="National newspaper sports coverage"
+        loading="lazy"
+      >
+      <h3>NATIONAL PAPERS</h3>
+      <p>
+        Providing national publications with reliable freelance
+        journalists and photographers who can deliver coverage
+        from across the sporting landscape.
+      </p>
+    </div>
+
+    <div class="press-outlet">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_732106868e9947c3ad4eb60d8d222fe6~mv2.webp/v1/fill/w_363,h_414,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="Sports social media content creation"
+        loading="lazy"
+      >
+      <h3>SOCIAL MEDIA</h3>
+      <p>
+        Helping sports-focused social media channels find engaging
+        presenters, content creators and journalists who know how
+        to bring stories to life.
+      </p>
+    </div>
+
+    <div class="press-outlet">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_09473670dd5b423d815f11049f3cba60~mv2.webp/v1/fill/w_363,h_416,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="Online sports magazine"
+        loading="lazy"
+      >
+      <h3>ONLINE MAGAZINES</h3>
+      <p>
+        Connecting digital magazines and specialist sports publications
+        with writers who can produce informed features, interviews
+        and original sporting content.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <section class="section light-section">
