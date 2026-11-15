@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LINEBREAK CLUB | Linebreak Media</title>
 <meta name="description" content="Professional sports journalism, website content and social media management for sports clubs.">
+
 <style>
 :root {
   --navy: #071a33;
@@ -22,6 +24,7 @@ body {
   line-height: 1.65;
 }
 a { text-decoration: none; color: inherit; }
+
 header {
   background: white;
   color: var(--navy);
@@ -42,6 +45,7 @@ nav a {
   text-transform: uppercase;
 }
 nav a:hover { color: var(--gold); }
+
 .hero {
   background: linear-gradient(120deg, #071a33, #173c63);
   color: white;
@@ -70,6 +74,7 @@ nav a:hover { color: var(--gold); }
   margin: 25px auto;
   color: #dce5ef;
 }
+
 .button {
   display: inline-block;
   padding: 13px 25px;
@@ -86,6 +91,7 @@ nav a:hover { color: var(--gold); }
   color: white;
   border: 1px solid white;
 }
+
 .section {
   padding: 75px 7%;
   text-align: center;
@@ -105,6 +111,8 @@ nav a:hover { color: var(--gold); }
   background: var(--gold);
   margin: 18px auto 25px;
 }
+.light-section { background: var(--light); }
+
 .feature-image {
   width: 100%;
   max-width: 750px;
@@ -112,6 +120,30 @@ nav a:hover { color: var(--gold); }
   display: block;
   margin: 0 auto 35px;
 }
+
+/* CLUB TYPES */
+.club-types {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+.club-type {
+  background: white;
+  padding: 30px;
+  border-top: 4px solid var(--gold);
+}
+.club-type h3 {
+  color: var(--navy);
+  font-size: 19px;
+  margin-bottom: 12px;
+  letter-spacing: .4px;
+}
+.club-type p { color: var(--text); }
+
+/* SERVICES */
 .services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -145,7 +177,68 @@ nav a:hover { color: var(--gold); }
   margin-bottom: 25px;
 }
 .service-card li { margin-bottom: 9px; }
-.light-section { background: var(--light); }
+
+/* SOCIAL MEDIA */
+.social-intro {
+  max-width: 850px;
+  margin: 0 auto 40px;
+}
+.social-intro p {
+  margin-bottom: 18px;
+}
+.social-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+  max-width: 1050px;
+  margin: 45px auto 0;
+  text-align: left;
+}
+.social-service {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 35px;
+  align-items: center;
+  background: white;
+  padding: 25px;
+  border-left: 4px solid var(--gold);
+}
+.social-service:nth-child(even) {
+  grid-template-columns: 1fr 42%;
+}
+.social-service:nth-child(even) .social-image {
+  order: 2;
+}
+.social-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+.social-copy .number {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.social-copy h3 {
+  color: var(--navy);
+  font-size: 24px;
+  margin: 8px 0 4px;
+}
+.social-copy h4 {
+  color: var(--blue);
+  font-size: 15px;
+  margin-bottom: 12px;
+  letter-spacing: .5px;
+}
+.social-copy p { margin-bottom: 15px; }
+.social-copy ul {
+  padding-left: 20px;
+}
+.social-copy li { margin-bottom: 6px; }
+
+/* BENEFITS */
 .benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -163,6 +256,8 @@ nav a:hover { color: var(--gold); }
   color: var(--navy);
   margin-bottom: 10px;
 }
+
+/* PROCESS */
 .process {
   max-width: 850px;
   margin: 35px auto 0;
@@ -179,6 +274,8 @@ nav a:hover { color: var(--gold); }
   color: var(--navy);
   margin-bottom: 5px;
 }
+
+/* CALL TO ACTION */
 .cta {
   background: var(--navy);
   color: white;
@@ -189,6 +286,7 @@ nav a:hover { color: var(--gold); }
   max-width: 700px;
   margin: 0 auto 25px;
 }
+
 footer {
   background: #041225;
   color: white;
@@ -200,16 +298,27 @@ footer p {
   font-size: 12px;
   margin-top: 8px;
 }
+
 @media(max-width: 800px) {
   header { justify-content: center; text-align: center; }
   nav { justify-content: center; gap: 12px; }
   nav a { font-size: 10px; }
-  .services, .benefits { grid-template-columns: 1fr; }
+  .services, .club-types, .benefits { grid-template-columns: 1fr; }
+  .social-service,
+  .social-service:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .social-service:nth-child(even) .social-image {
+    order: 0;
+  }
+  .social-image { height: auto; }
   .hero { padding: 65px 20px; }
   .section { padding: 55px 6%; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -249,12 +358,39 @@ footer p {
   <p class="section-intro">
     Every sports club has stories worth telling. From match reports and player interviews to behind-the-scenes features and supporter-focused social media, Linebreak Club helps make your club's coverage more consistent, professional and engaging.
   </p>
-  <p class="section-intro">
-    Whether you're an amateur, grassroots, university or semi-professional organisation, our services are designed to help you communicate with your audience and raise your club's profile.
-  </p>
 </section>
 
 <section class="section light-section">
+  <h2>WE GROW THE GRASS ROOTS.</h2>
+  <div class="gold-line"></div>
+  <p class="section-intro">
+    Great sports stories aren't exclusive to the professional game. We work with clubs and organisations at every level, helping them showcase their people, celebrate their achievements and build stronger connections with their communities.
+  </p>
+
+  <div class="club-types">
+    <div class="club-type">
+      <h3>AMATEUR AND SEMI-PROFESSIONAL CLUBS</h3>
+      <p>Match coverage, interviews, club news and social media content to showcase your teams, achievements and community.</p>
+    </div>
+
+    <div class="club-type">
+      <h3>UNIVERSITIES AND COLLEGE SPORT</h3>
+      <p>Helping student clubs build their identity, engage students and attract new audiences through journalism, photography, video and social media.</p>
+    </div>
+
+    <div class="club-type">
+      <h3>THERE'S NOTHING TOO NICHE</h3>
+      <p>From martial arts and athletics to emerging sports and specialist competitions, we help lesser-known sports find their audience and tell their stories.</p>
+    </div>
+
+    <div class="club-type">
+      <h3>SOCIAL SPORT AND FITNESS CLUBS</h3>
+      <p>Helping recreational groups and fitness communities promote activities, celebrate members, attract new participants and build their identity.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <h2>TWO SERVICES. ONE CLUB PARTNER.</h2>
   <div class="gold-line"></div>
   <p class="section-intro">
@@ -289,6 +425,92 @@ footer p {
       </ul>
       <a href="pricing.html" class="button">Social Media Packages</a>
     </div>
+  </div>
+</section>
+
+<section class="section light-section">
+  <h2>WHAT WE CAN OFFER YOUR CLUB</h2>
+  <div class="gold-line"></div>
+
+  <div class="social-intro">
+    <p><strong>Your social media is often the first place supporters, sponsors and potential new members discover your club.</strong> Linebreak Club can help you create a consistent, engaging online presence through professionally produced graphics, short-form video content and curated social media posts.</p>
+
+    <p>Whether you need occasional matchday content or someone to manage your social media throughout the week, we can tailor our services to suit your club, your audience and your budget.</p>
+  </div>
+
+  <div class="social-services">
+
+    <div class="social-service">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_857c24898b4e4a5fbfb7f4634b5abfe1~mv2.webp/v1/fill/w_460,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="Sports videographer filming a match"
+        class="social-image"
+      >
+      <div class="social-copy">
+        <span class="number">01 / SHORT-FORM VIDEO CONTENT</span>
+        <h3>BRING YOUR CLUB TO LIFE.</h3>
+        <p>Video is one of the most effective ways to showcase the people, personalities and moments behind your club. We can help produce engaging short-form video content for platforms such as Instagram Reels, Facebook and TikTok.</p>
+        <ul>
+          <li>Player and coach interviews</li>
+          <li>Matchday highlights</li>
+          <li>Behind-the-scenes training content</li>
+          <li>Player introductions and profiles</li>
+          <li>Match previews and post-match reactions</li>
+          <li>Sponsor promotional videos</li>
+          <li>Club announcements and event promotions</li>
+          <li>Community and recruitment videos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="social-service">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_2626de64f8e14b0eb38d4e6fb049f76e~mv2.webp/v1/fill/w_460,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="Professional rugby team lineup graphic"
+        class="social-image"
+      >
+      <div class="social-copy">
+        <span class="number">02 / GRAPHICS AND VISUAL CONTENT</span>
+        <h3>MAKE YOUR CLUB STAND OUT.</h3>
+        <p>Give your club a recognisable and consistent visual identity across its social media channels. We create branded graphics and visual content that reflects your club's colours, identity and personality.</p>
+        <ul>
+          <li>Matchday announcement graphics</li>
+          <li>Team selection and starting XV graphics</li>
+          <li>Full-time score and result graphics</li>
+          <li>Player of the Match announcements</li>
+          <li>Player signing and squad announcements</li>
+          <li>Fixture and competition promotion</li>
+          <li>League table and statistics graphics</li>
+          <li>Sponsor recognition and promotional graphics</li>
+          <li>Club news and event announcements</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="social-service">
+      <img
+        src="https://static.wixstatic.com/media/984d1f_d80e6f45d3de4f6789413a3d642d3766~mv2.webp/v1/fill/w_460,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
+        alt="Sports supporters following a match on their phones"
+        class="social-image"
+      >
+      <div class="social-copy">
+        <span class="number">03 / SOCIAL MEDIA POSTS AND MANAGEMENT</span>
+        <h3>KEEP YOUR SUPPORTERS CONNECTED.</h3>
+        <p>Maintaining an active social media presence takes time, planning and consistency. We can help your club plan, prepare, schedule and publish content across its agreed social media platforms.</p>
+        <ul>
+          <li>A monthly planned social media content calendar</li>
+          <li>Writing captions and preparing posts</li>
+          <li>Scheduling posts ahead of time</li>
+          <li>Publishing matchday updates and results</li>
+          <li>Promoting upcoming fixtures and events</li>
+          <li>Sharing player, coach and sponsor features</li>
+          <li>Highlighting club news and achievements</li>
+          <li>Creating content to encourage engagement</li>
+          <li>Basic updates on content performance</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
