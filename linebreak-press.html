@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linebreak Press | The Stories Behind the Sport</title>
+  <meta name="description" content="Connecting sports publications with reliable freelance journalists, photographers and content creators.">
+  
+  <style>
+    :root {
+      --navy: #101d35;
+      --gold: #c6a45c;
+      --text: #39465a;
+      --light: #f4f6f9;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: white;
+    }
+
+    header {
+      background: #ffffff;
+      color: var(--navy);
+      padding: 20px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+      border-bottom: 1px solid #e5eaf0;
+    }
+
+    .logo img {
+      max-width: 220px;
+      max-height: 70px;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      color: var(--gold);
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 17px;
+      color: #e2e7ef;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 4px;
+      background: var(--gold);
+      margin: 20px auto 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 13px 28px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 8px;
+    }
+
+    .button:hover {
+      background: white;
+    }
+
+    .button-outline {
+      display: inline-block;
+      border: 2px solid var(--gold);
+      color: white;
+      padding: 11px 26px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 8px;
+    }
+
+    .button-outline:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .section {
+      padding: 75px 8%;
+      text-align: center;
+    }
+
+    .light-section {
+      background: var(--light);
+    }
+
+    .section h2 {
+      color: var(--navy);
+      font-size: clamp(26px, 4vw, 36px);
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+    }
+
+    .intro-image {
+      width: 100%;
+      max-width: 780px;
+      height: auto;
+      display: block;
+      margin: 35px auto;
+    }
+
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1150px;
+      margin: 40px auto 0;
+      text-align: left;
+    }
+
+    .press-card {
+      background: white;
+      padding: 32px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .press-card h3 {
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 14px;
+      letter-spacing: .4px;
+    }
+
+    .press-card p {
+      color: var(--text);
+    }
+
+    .press-icon {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .dark-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .dark-section h2 {
+      color: white;
+    }
+
+    .dark-section .section-intro {
+      color: #e2e7ef;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+      text-align: left;
+    }
+
+    .benefit {
+      border-left: 3px solid var(--gold);
+      padding: 12px 22px;
+    }
+
+    .benefit h3 {
+      color: var(--gold);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: #e2e7ef;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: 40px auto 0;
+    }
+
+    .step {
+      padding: 25px;
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #e2e7ef;
+    }
+
+    footer {
+      background: #091326;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: #cbd3df;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .press-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 55px 6%;
+      }
+
+      .hero {
+        padding: 65px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="linebreak-club.html">Linebreak Club</a>
+    <a href="linebreak-press.html">Linebreak Press</a>
+    <a href="network.html">Join the Network</a>
+    <a href="academy.html">Training Academy</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="enquiries.html">Enquiries</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>LINEBREAK PRESS</h1>
+  <h2>THE STORIES BEHIND THE SPORT.</h2>
+  <div class="gold-line"></div>
+  <p>
+    Connecting sports publications with the journalists, photographers
+    and content creators who bring the stories behind the sport to life.
+  </p>
+  <a href="enquiries.html" class="button">WORK WITH US</a>
+  <a href="network.html" class="button-outline">JOIN OUR NETWORK</a>
+</section>
+
+<section class="section">
+  <h2>GREAT COVERAGE STARTS WITH GREAT PEOPLE.</h2>
+  <div class="gold-line"></div>
+
+  <p class="section-intro">
+    Finding the right freelance journalist for a sporting event,
+    publication or assignment shouldn't be difficult. Linebreak Press
+    helps make that connection, bringing publications and talented
+    freelance contributors together.
+  </p>
+
+  <p class="section-intro">
+    Whether you need match reporting, interviews, features, photography
+    or wider digital content, we help you find the right people to tell
+    the stories that matter.
+  </p>
+</section>
+
+<section class="section light-section">
+  <h2>WHAT WE BRING TO THE PRESS BOX.</h2>
+  <div class="gold-line"></div>
+
+  <p class="section-intro">
+    From one-off assignments to ongoing coverage, Linebreak Press
+    provides access to a network of freelance sports media talent.
+  </p>
+
+  <div class="press-grid">
+    <div class="press-card">
+      <div class="press-icon">✍️</div>
+      <h3>FREELANCE JOURNALISTS</h3>
+      <p>
+        Match reports, live coverage, interviews, news stories,
+        opinion pieces and long-form features across a range of sports.
+      </p>
+    </div>
+
+    <div class="press-card">
+      <div class="press-icon">📸</div>
+      <h3>SPORTS PHOTOGRAPHERS</h3>
+      <p>
+        Matchday photography, sporting events, portraits and
+        behind-the-scenes coverage to bring your stories to life.
+      </p>
+    </div>
+
+    <div class="press-card">
+      <div class="press-icon">🎥</div>
+      <h3>CONTENT CREATORS</h3>
+      <p>
+        Digital-first content, video, social media material and
+        creative storytelling for modern sports audiences.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-section">
+  <h2>BUILT AROUND YOUR PUBLICATION.</h2>
+  <div class="gold-line"></div>
+
+  <p class="section-intro">
+    Every publication has different requirements. We work to understand
+    your coverage needs and connect you with contributors suited to
+    your sport, audience and assignment.
+  </p>
+
+  <div class="benefits-grid">
+    <div class="benefit">
+      <h3>THE RIGHT CONTRIBUTORS</h3>
+      <p>
+        Access freelance talent with knowledge and experience across
+        different sports, competitions and regions.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>FLEXIBLE COVERAGE</h3>
+      <p>
+        Find support for individual fixtures, major sporting events
+        or regular coverage requirements.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>LESS TIME SEARCHING</h3>
+      <p>
+        We help connect publications with suitable contributors,
+        making the process of finding freelance coverage easier.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <h3>ONE POINT OF CONTACT</h3>
+      <p>
+        Deal directly with Linebreak Media when discussing your
+        requirements and arranging suitable assignments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>HOW LINEBREAK PRESS WORKS.</h2>
+  <div class="gold-line"></div>
+
+  <p class="section-intro">
+    A straightforward approach to getting the coverage you need.
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <h3>TELL US WHAT YOU NEED</h3>
+      <p>
+        Get in touch with your publication, sport, location and
+        assignment requirements.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">02</div>
+      <h3>WE FIND THE RIGHT FIT</h3>
+      <p>
+        We identify suitable freelance contributors from the
+        Linebreak network for your requirements.
+      </p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">03</div>
+      <h3>GET THE STORY COVERED</h3>
+      <p>
+        We help bring the publication and contributor together
+        to arrange the assignment and deliver the coverage.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section light-section">
+  <h2>SPORT IS BIGGER THAN THE HEADLINES.</h2>
+  <div class="gold-line"></div>
+
+  <p class="section-intro">
+    From the biggest international competitions to the stories
+    happening at grassroots level, there are talented people
+    and compelling stories across every corner of sport.
+  </p>
+
+  <p class="section-intro">
+    Linebreak Press exists to help those stories reach the audiences
+    they deserve, while creating opportunities for the people
+    who tell them.
+  </p>
+</section>
+
+<section class="cta">
+  <h2>LET'S GET YOUR NEXT STORY COVERED.</h2>
+  <p>
+    Looking for freelance sports coverage? Need a journalist,
+    photographer or content creator for an upcoming assignment?
+    Let's talk.
+  </p>
+  <a href="enquiries.html" class="button">MAKE AN ENQUIRY</a>
+</section>
+
+<footer>
+  <p><strong>LINEBREAK MEDIA</strong></p>
+  <p>THE STORIES BEHIND THE SPORT.</p>
+  <p>© 2026 Linebreak Media. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
