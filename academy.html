@@ -1,0 +1,899 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linebreak Journalism Training | Linebreak Media</title>
+  <meta name="description" content="Practical online sports journalism workshops led by professional sports journalist Tom Sansom. Learn the skills, build your confidence and tell better stories.">
+
+  <style>
+    :root {
+      --navy: #101d32;
+      --navy-light: #192b46;
+      --gold: #d5ad57;
+      --white: #ffffff;
+      --light: #f4f5f7;
+      --text: #283447;
+      --muted: #667085;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--white);
+      padding: 16px 5%;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo img {
+      max-width: 220px;
+      max-height: 70px;
+      width: auto;
+      height: auto;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 18px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #b58b37;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 65px 20px 75px;
+    }
+
+    .academy-logo {
+      display: block;
+      width: 190px;
+      max-width: 65%;
+      height: auto;
+      margin: 0 auto 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 22px;
+      letter-spacing: 1px;
+    }
+
+    .hero .tagline {
+      color: var(--gold);
+      font-size: clamp(17px, 2.5vw, 23px);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      max-width: 820px;
+      margin: 0 auto 17px;
+      color: #e5e9ef;
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 14px 26px;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #e6c779;
+    }
+
+    .section {
+      padding: 75px 20px;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: 0.4px;
+    }
+
+    .section h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin: 25px 0 12px;
+    }
+
+    .section p {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .eyebrow {
+      display: block;
+      color: #a17a2f;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      margin-bottom: 13px;
+    }
+
+    .gold-line {
+      width: 65px;
+      height: 4px;
+      background: var(--gold);
+      margin: 22px 0 30px;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin-bottom: 35px;
+    }
+
+    .tutor-section {
+      background: var(--light);
+    }
+
+    .tutor-heading {
+      margin-bottom: 35px;
+    }
+
+    .tutor-layout {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.75fr) minmax(0, 1.7fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .tutor-photo-wrap {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .tutor-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border: 5px solid var(--white);
+      box-shadow: 0 8px 25px rgba(16, 29, 50, 0.12);
+    }
+
+    .tutor-name {
+      font-size: 29px;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .tutor-role {
+      color: #a17a2f;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      margin-bottom: 25px;
+    }
+
+    .tutor-copy p {
+      font-size: 14px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .stat-card {
+      background: var(--navy);
+      color: var(--white);
+      padding: 25px 22px;
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .stat-card h3 {
+      color: var(--gold);
+      font-size: 19px;
+      margin: 0 0 12px;
+    }
+
+    .stat-card p {
+      color: #e2e7ef;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .audience-section {
+      background: var(--white);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .audience-card {
+      background: var(--light);
+      padding: 28px;
+      border-top: 4px solid var(--gold);
+    }
+
+    .card-number {
+      color: #b58b37;
+      font-size: 31px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .audience-card h3 {
+      font-size: 20px;
+      margin: 0 0 5px;
+      color: var(--navy);
+    }
+
+    .audience-card h4 {
+      color: #a17a2f;
+      font-size: 12px;
+      letter-spacing: 0.6px;
+      margin-bottom: 15px;
+    }
+
+    .audience-card p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .learning-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .learning-section h2 {
+      color: var(--white);
+    }
+
+    .learning-section .section-intro p {
+      color: #e0e6ef;
+    }
+
+    .learning-section .eyebrow {
+      color: var(--gold);
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .lesson-card {
+      background: var(--white);
+      color: var(--text);
+      padding: 25px;
+      border-top: 4px solid var(--gold);
+      min-height: 245px;
+    }
+
+    .lesson-number {
+      color: #b58b37;
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .lesson-card h3 {
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.35;
+      margin: 0 0 13px;
+    }
+
+    .lesson-card p {
+      font-size: 13px;
+      margin: 0;
+      color: #4b5565;
+    }
+
+    .beta-section {
+      background: var(--light);
+    }
+
+    .beta-highlight {
+      background: var(--navy);
+      color: var(--white);
+      padding: 30px;
+      margin-top: 30px;
+      border-left: 5px solid var(--gold);
+    }
+
+    .beta-highlight h3 {
+      color: var(--gold);
+      margin: 0 0 12px;
+    }
+
+    .beta-highlight p {
+      color: #e2e7ef;
+      margin: 0;
+    }
+
+    .development-section {
+      background: var(--white);
+    }
+
+    .development-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .development-card {
+      padding: 25px;
+      background: var(--light);
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .development-card h3 {
+      font-size: 17px;
+      margin: 0 0 12px;
+    }
+
+    .development-card p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .feedback-section {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .feedback-section h2 {
+      color: var(--white);
+    }
+
+    .feedback-section .gold-line {
+      margin: 22px auto 28px;
+    }
+
+    .feedback-section p {
+      max-width: 800px;
+      margin: 0 auto 17px;
+      color: #e2e7ef;
+    }
+
+    .feedback-email {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--gold);
+      font-weight: 800;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .pricing-section {
+      background: var(--light);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .price-card {
+      background: var(--white);
+      padding: 28px 22px;
+      text-align: center;
+      border-top: 5px solid var(--gold);
+      box-shadow: 0 5px 18px rgba(16, 29, 50, 0.06);
+    }
+
+    .price-card h3 {
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0 0 15px;
+    }
+
+    .price {
+      color: var(--navy);
+      font-size: 43px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+
+    .price-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .price-card.founding {
+      background: var(--navy);
+    }
+
+    .price-card.founding h3,
+    .price-card.founding p {
+      color: #e2e7ef;
+    }
+
+    .price-card.founding .price {
+      color: var(--gold);
+    }
+
+    .pricing-note {
+      margin-top: 25px;
+      padding: 18px;
+      background: #fff8e9;
+      border-left: 4px solid var(--gold);
+      font-size: 13px;
+      color: #4b5565;
+    }
+
+    .final-cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 75px 20px;
+    }
+
+    .final-cta h2 {
+      color: var(--white);
+      font-size: clamp(28px, 4vw, 38px);
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      max-width: 800px;
+      margin: 0 auto 17px;
+      color: #e2e7ef;
+      font-size: 15px;
+    }
+
+    .final-cta .email {
+      display: block;
+      color: var(--gold);
+      font-weight: 800;
+      margin: 15px 0;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #091322;
+      color: #c2cad6;
+      padding: 25px 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px 16px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .tutor-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .tutor-photo-wrap {
+        max-width: 300px;
+      }
+
+      .stats-grid,
+      .development-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo img {
+        max-width: 190px;
+      }
+
+      .hero {
+        padding: 50px 20px 60px;
+      }
+
+      .section {
+        padding: 55px 20px;
+      }
+
+      .card-grid,
+      .lesson-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-card,
+      .lesson-card {
+        padding: 23px;
+      }
+
+      .lesson-card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="linebreak-club.html">Linebreak Club</a>
+        <a href="linebreak-press.html">Linebreak Press</a>
+        <a href="network.html">Join the Network</a>
+        <a href="academy.html">Academy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="enquiries.html">Enquiries</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img class="academy-logo" src="LJTA%20Journalism%20Training%20Academy%20Logo.png" alt="Linebreak Journalism Training Academy Logo">
+
+    <h1>LINEBREAK JOURNALISM TRAINING</h1>
+
+    <div class="tagline">
+      LEARN THE SKILLS.<br>
+      BUILD YOUR CONFIDENCE.<br>
+      TELL BETTER STORIES.
+    </div>
+
+    <p>Sports journalism is about more than writing an article. You find the story, ask the right questions, report under pressure and understand how to stand out in a digital world.</p>
+
+    <p>The Linebreak Journalism Training Programme provides practical online workshops designed to help aspiring and developing sports journalists build the skills, confidence and independence needed to succeed in modern sports media.</p>
+
+    <p>Sessions are led by professional sports journalist and Linebreak Media Founder Tom Sansom.</p>
+
+    <p>The workshops combine presented teaching, group discussions, practical exercises and consistent feedback, that participants can apply directly to their own journalism.</p>
+
+    <a class="button" href="mailto:tom.linebreakmedia@gmail.com?subject=Enquiry%20about%20Journalism%20Training">ENQUIRE ABOUT TRAINING</a>
+  </section>
+
+  <section class="section tutor-section">
+    <div class="section-inner">
+
+      <div class="tutor-heading">
+        <span class="eyebrow">MEET YOUR TUTOR</span>
+        <h2>INDUSTRY EXPERIENCE. INTERNATIONAL PERSPECTIVE. PRACTICAL KNOW-HOW.</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="tutor-layout">
+
+        <div class="tutor-photo-wrap">
+          <img class="tutor-photo" src="Linkedinimage.avif" alt="Tom Sansom, Founder and Lead Tutor of Linebreak Journalism Training">
+        </div>
+
+        <div class="tutor-copy">
+          <div class="tutor-name">TOM SANSOM</div>
+          <div class="tutor-role">FOUNDER &amp; LEAD TUTOR | SPORTS JOURNALIST</div>
+
+          <p>Tom Sansom is an experienced sports journalist and former Deputy Editor of two digital sports publications, with professional experience across the UK, Ireland and internationally.</p>
+
+          <p>He progressed from freelance contributor to leading editorial operations, developing a network of more than 70 student and freelance writers across the UK, Ireland, South Africa and New Zealand.</p>
+
+          <p>His reporting experience includes England men's and women's rugby, PREM Rugby, Ireland's national teams and URC provinces. His work has covered breaking news, match reporting, interviews, features, analysis and digital content strategy.</p>
+
+          <p>He also contributed research, transcription and data visualisation to the award-winning book <em>Concussed: Sport's Uncomfortable Truth</em>.</p>
+        </div>
+
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>70+ CONTRIBUTING WRITERS</h3>
+          <p>Established and developed an international network of student and freelance contributors for the UK's biggest rugby news website.</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>INTERNATIONAL COVERAGE</h3>
+          <p>Professional sports coverage across the UK, Ireland, New Zealand, Italy, France and Portugal.</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>EDITORIAL LEADERSHIP</h3>
+          <p>Former Deputy Editor of RUCK and 180UK responsible for editorial output, contributor coordination and digital publishing.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section audience-section">
+    <div class="section-inner">
+      <span class="eyebrow">WHO IS THIS PROGRAMME FOR?</span>
+      <h2>BUILT FOR EVERY STAGE OF YOUR SPORTS JOURNALISM JOURNEY</h2>
+      <div class="gold-line"></div>
+
+      <div class="card-grid">
+        <div class="audience-card">
+          <div class="card-number">01</div>
+          <h3>CAREER CHANGERS</h3>
+          <h4>TAKE YOUR FIRST STEP INTO SPORTS JOURNALISM.</h4>
+          <p>For people looking to move into a new career and turn an interest in sport and storytelling into a professional opportunity. Develop the essential writing, reporting, interviewing and digital skills needed to begin your journalism journey.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="card-number">02</div>
+          <h3>STUDENTS</h3>
+          <h4>BUILD YOUR SKILLS BEFORE YOU GRADUATE.</h4>
+          <p>Designed for media and journalism students, as well as students studying other subjects who want to develop practical sports journalism skills alongside their degree. Build your experience, strengthen your portfolio and give yourself more to offer when pursuing your first media role.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="card-number">03</div>
+          <h3>START-UP FREELANCERS</h3>
+          <h4>TURN YOUR PASSION INTO FREELANCE OPPORTUNITIES.</h4>
+          <p>For aspiring and early-career freelance sports journalists looking to understand how the industry works. Learn how to pitch stories to editors, approach publications, find opportunities, manage assignments and handle the practical side of freelancing, including invoices and expenses.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="card-number">04</div>
+          <h3>INFLUENCERS AND CONTENT CREATORS</h3>
+          <h4>GROW YOUR BRAND. CREATE WITH PURPOSE.</h4>
+          <p>For aspiring sports content creators and micro-influencers looking to establish themselves in the fast-growing world of online sports media. Develop professional skills in short-form video, digital storytelling, audience engagement and content creation to help build a recognisable and credible brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section learning-section">
+    <div class="section-inner">
+      <div class="section-intro">
+        <span class="eyebrow">WHAT YOU WILL LEARN</span>
+        <h2>TEN FOUNDATIONS. PRACTICAL SKILLS. REAL-WORLD APPLICATION.</h2>
+        <div class="gold-line"></div>
+
+        <p>The Linebreak Journalism Training Programme covers the essential skills needed to develop as a modern sports journalist and digital content creator. From writing and reporting to pitching, interviewing and building your own brand, each session is designed to give you practical knowledge you can put into action.</p>
+      </div>
+
+      <div class="lesson-grid">
+
+        <div class="lesson-card">
+          <div class="lesson-number">01</div>
+          <h3>FINDING THE STORY: NEWS, RESEARCH AND STORYTELLING</h3>
+          <p>Learn how to identify interesting stories, recognise newsworthy angles, research effectively and find opportunities beyond the scoreline. Explore news values, human-interest stories, sporting milestones and how to turn an idea into a compelling story.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">02</div>
+          <h3>WRITING FOR DIGITAL: ARTICLES, HEADLINES AND SEO</h3>
+          <p>Develop the skills to write engaging online news articles, match reports and sports content. Learn how to structure articles, write effective introductions and headlines, use keywords, understand search intent and make content accessible to online audiences.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">03</div>
+          <h3>MATCH REPORTING AND LIVE SPORTS COVERAGE</h3>
+          <p>Learn how to prepare for sporting events, take effective notes, identify key moments and produce accurate match reports under pressure. Cover live reporting, player ratings, post-match reaction, press-box preparation and working to tight deadlines.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">04</div>
+          <h3>INTERVIEWING AND PRESENTING TO CAMERA</h3>
+          <p>Develop confidence when interviewing athletes, coaches and other sporting figures, both in person and on camera. Learn how to prepare questions, present confidently, deliver pieces to camera and develop skills in sports presenting, vlogging and influencer-style content.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">05</div>
+          <h3>FEATURES, LONG-FORM WRITING AND DIGITAL STORYTELLING</h3>
+          <p>Explore how to move beyond match reports and create engaging features, profiles and longer-form sports stories. Learn about narrative structure, scene-setting, interviewing, storytelling techniques and building a compelling article from an idea.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">06</div>
+          <h3>EDITING, ACCURACY AND EDITORIAL STANDARDS</h3>
+          <p>Understand how to edit your own work and produce professional, reliable content. Cover grammar, structure, fact-checking, research, identifying errors, avoiding repetition, editorial judgement and maintaining accuracy across written and digital content.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">07</div>
+          <h3>CREATING SPORTS GRAPHICS WITH CANVA</h3>
+          <p>Learn how to use Canva to produce professional-looking sports graphics and visual content. Create matchday announcements, team selections, scorecards, player profiles, statistics graphics and promotional posts. Explore templates, typography, colour, branding and visual consistency.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">08</div>
+          <h3>SHORT-FORM VIDEO: FILMING AND EDITING FOR TIKTOK AND REELS</h3>
+          <p>Learn how to plan, film and edit short-form sports content for platforms such as TikTok and Instagram Reels. Cover vertical video, hooks, sequencing, trimming clips, transitions, captions, subtitles, audio and accessible editing tools.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">09</div>
+          <h3>SOCIAL MEDIA STRATEGY AND AUDIENCE ENGAGEMENT</h3>
+          <p>Understand how to build an effective social media presence around a sport, club, publication or personal brand. Explore platform differences, content calendars, scheduling, captions, audience engagement, growing an online following and adapting content for different platforms.</p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-number">10</div>
+          <h3>BUILDING A JOURNALISM AND CONTENT CREATION CAREER</h3>
+          <p>Learn how to turn your skills into opportunities. Cover building a portfolio, pitching publications, approaching clubs and organisations, networking, developing a personal brand, finding freelance work and understanding the practical responsibilities of working independently.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section beta-section">
+    <div class="section-inner">
+      <span class="eyebrow">THIS IS OUR BETA STAGE. YOUR FEEDBACK MATTERS.</span>
+      <h2>BUILT TO DEVELOP. SHAPED BY YOU.</h2>
+      <div class="gold-line"></div>
+
+      <p>The Linebreak Journalism Training Programme is launching in its beta stage. That means we're not simply delivering a fixed course and expecting everyone to follow the same path.</p>
+
+      <p>We want the programme to develop alongside the people taking part. Your feedback, interests and experiences will help shape future sessions. If there are topics you'd like to explore in greater detail, skills you want to revisit or areas you feel are missing, we want to hear about them.</p>
+
+      <div class="beta-highlight">
+        <h3>HOW THE PROGRAMME CAN DEVELOP</h3>
+        <p>NOT A ONE-SIZE-FITS-ALL COURSE. A PROGRAMME THAT GROWS WITH ITS PARTICIPANTS.</p>
+        <br>
+        <p>Our aim is to build a practical, accessible and evolving sports journalism training programme that responds to the people taking part.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section development-section">
+    <div class="section-inner">
+      <div class="development-grid">
+
+        <div class="development-card">
+          <h3>REVISIT AND REPEAT</h3>
+          <p>Some subjects deserve more than one session. Where there is demand, we can revisit previous topics, provide additional guidance and run repeat classes for people who want to strengthen their understanding.</p>
+        </div>
+
+        <div class="development-card">
+          <h3>MORE CLASSES. MORE OPPORTUNITIES.</h3>
+          <p>The ten foundation topics provide a starting point, not a limit. Additional classes, specialist workshops and new subjects can be introduced in response to participant interest and demand.</p>
+        </div>
+
+        <div class="development-card">
+          <h3>SHAPED BY YOUR FEEDBACK</h3>
+          <p>We actively welcome suggestions, questions and constructive feedback. Participants can help direct the programme towards the skills, challenges and opportunities that matter most to them.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section feedback-section">
+    <div class="section-inner">
+      <span class="eyebrow">HAVE A TOPIC YOU'D LIKE US TO COVER?</span>
+      <h2>WE WANT TO HEAR FROM YOU.</h2>
+      <div class="gold-line"></div>
+
+      <p>Whether you have an idea for a future workshop, want to revisit a previous subject or simply have feedback about the programme, we'd love to hear from you.</p>
+
+      <p><strong>SHARE YOUR FEEDBACK TO:</strong></p>
+      <a class="feedback-email" href="mailto:tom.linebreakmedia@gmail.com">TOM.LINEBREAKMEDIA@GMAIL.COM</a>
+    </div>
+  </section>
+
+  <section class="section pricing-section">
+    <div class="section-inner">
+      <span class="eyebrow">PRICING AND LAUNCH OFFER</span>
+      <h2>FOUNDING PARTICIPANT OFFER</h2>
+      <div class="gold-line"></div>
+
+      <div class="pricing-grid">
+
+        <div class="price-card">
+          <h3>STANDARD WORKSHOP PRICE</h3>
+          <div class="price">€10</div>
+          <p>Per person, per session.</p>
+        </div>
+
+        <div class="price-card founding">
+          <h3>FOUNDING PARTICIPANT PRICE</h3>
+          <div class="price">€5</div>
+          <p>Per person, per session. For the first 10 people who express interest, applied to their first 10 sessions.</p>
+        </div>
+
+        <div class="price-card">
+          <h3>POTENTIAL SAVING ACROSS 10 SESSIONS</h3>
+          <div class="price">€50</div>
+          <p>A limited introductory offer for the initial launch phase.</p>
+        </div>
+
+      </div>
+
+      <div class="pricing-note">
+        A limited introductory offer for the initial launch phase. Sessions are booked individually – this is not a compulsory fixed ten-session course.
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="section-inner">
+      <h2>READY TO DEVELOP YOUR JOURNALISM?</h2>
+
+      <p>Linebreak Journalism Training is currently in its foundation launch phase. We're inviting the first prospective participants to express their interest and help shape the development of the programme. To enquire about upcoming workshops, the founding participant offer or specific training topics, contact Tom Sansom directly.</p>
+
+      <a class="email" href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+
+      <a class="button" href="mailto:tom.linebreakmedia@gmail.com?subject=Enquiry%20about%20Journalism%20Training">ENQUIRE ABOUT TRAINING</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Linebreak Media. All rights reserved.
+  </footer>
+
+</body>
+</html>
