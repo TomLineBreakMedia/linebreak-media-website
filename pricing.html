@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pricing | Linebreak Media</title>
+  <meta name="description" content="Explore Linebreak Media pricing for club social media, professional website journalism, freelance sports coverage and journalism training.">
+
+  <style>
+    :root {
+      --navy: #071a33;
+      --blue: #12365c;
+      --gold: #d4a94f;
+      --white: #ffffff;
+      --light: #f2f5f8;
+      --text: #17283d;
+      --muted: #657386;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--white);
+      padding: 14px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e5e9ee;
+    }
+
+    .logo img {
+      display: block;
+      width: 190px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    .pricing-banner {
+      width: 100%;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .pricing-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 570px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .intro {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 38px 6% 45px;
+    }
+
+    .intro h1 {
+      font-size: 30px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #e1e8f0;
+      font-size: 15px;
+    }
+
+    .jump-section {
+      background: var(--light);
+      padding: 35px 6%;
+      text-align: center;
+    }
+
+    .jump-section h2 {
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 20px;
+      letter-spacing: 0.7px;
+    }
+
+    .jump-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .jump-buttons a {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 13px 19px;
+      border: 2px solid var(--navy);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.4px;
+      transition: all 0.2s ease;
+    }
+
+    .jump-buttons a:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--navy);
+    }
+
+    .pricing-section {
+      padding: 75px 6%;
+      scroll-margin-top: 25px;
+    }
+
+    .pricing-section:nth-of-type(even) {
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 850px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      display: block;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 30px;
+      line-height: 1.25;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .subheading {
+      color: var(--navy);
+      text-align: center;
+      font-size: 21px;
+      margin: 38px 0 22px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      max-width: 1250px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    .cards.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-width: 850px;
+    }
+
+    .price-card {
+      background: var(--white);
+      border: 1px solid #dce3eb;
+      border-radius: 7px;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 18px rgba(7, 26, 51, 0.06);
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--gold);
+    }
+
+    .price-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    .price-card .package-description {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      color: var(--navy);
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .price small {
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .euro-price {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .founding-price {
+      background: #fbf7ed;
+      border-left: 3px solid var(--gold);
+      padding: 12px 14px;
+      margin: 5px 0 17px;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .founding-price strong {
+      display: block;
+      font-size: 19px;
+      margin-bottom: 2px;
+    }
+
+    .per-item {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    .price-card h4 {
+      color: var(--navy);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin: 8px 0 10px;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .price-card li {
+      position: relative;
+      padding-left: 19px;
+      margin-bottom: 9px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .price-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    .card-button {
+      display: block;
+      width: 100%;
+      margin-top: auto;
+      padding: 14px 12px;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background 0.2s ease;
+    }
+
+    .card-button:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .info-panel {
+      max-width: 1050px;
+      margin: 32px auto 0;
+      padding: 22px 25px;
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      border-radius: 4px;
+    }
+
+    .info-panel h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .info-panel p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .info-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .standalone-card {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .standalone-card .price-card {
+      text-align: center;
+    }
+
+    .standalone-card .price-card ul {
+      text-align: left;
+    }
+
+    .standalone-card .price-card .founding-price {
+      text-align: left;
+    }
+
+    .comparison-example {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .example-box {
+      background: var(--light);
+      padding: 17px;
+      border-radius: 4px;
+    }
+
+    .example-box strong {
+      color: var(--navy);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .example-box p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .contact-strip {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 55px 6%;
+    }
+
+    .contact-strip h2 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .contact-strip p {
+      max-width: 700px;
+      margin: 0 auto 22px;
+      color: #e1e8f0;
+      font-size: 14px;
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 26px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-button:hover {
+      background: var(--white);
+    }
+
+    footer {
+      background: #041225;
+      color: var(--white);
+      text-align: center;
+      padding: 38px 6%;
+    }
+
+    footer h2 {
+      font-size: 21px;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    footer .tagline {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    footer p {
+      color: #c5cfdb;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      color: var(--white);
+    }
+
+    footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact {
+      margin: 17px 0;
+      line-height: 1.9;
+    }
+
+    .copyright {
+      border-top: 1px solid #23364d;
+      padding-top: 20px;
+      margin-top: 22px;
+      color: #9eacbc;
+    }
+
+    @media (max-width: 1000px) {
+      .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        padding: 17px 5%;
+      }
+
+      .logo img {
+        width: 175px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px 17px;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      .pricing-banner img {
+        max-height: none;
+      }
+
+      .intro h1 {
+        font-size: 25px;
+      }
+
+      .section-heading h2 {
+        font-size: 25px;
+      }
+
+      .pricing-section {
+        padding: 55px 5%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cards,
+      .cards.two,
+      .comparison-example {
+        grid-template-columns: 1fr;
+      }
+
+      .price-card {
+        padding: 25px 21px;
+      }
+
+      .jump-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .jump-buttons a {
+        width: 100%;
+      }
+
+      .intro {
+        padding: 30px 5% 35px;
+      }
+
+      .intro h1 {
+        font-size: 22px;
+      }
+
+      .section-heading h2 {
+        font-size: 23px;
+      }
+
+      .contact-strip h2 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a class="logo" href="index.html">
+      <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media logo">
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="linebreak-club.html">Club</a>
+      <a href="linebreak-press.html">Press</a>
+      <a href="network.html">Join Network</a>
+      <a href="academy.html">Training Academy</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="enquiries.html">Enquiries</a>
+    </nav>
+  </header>
+
+  <div class="pricing-banner">
+    <img src="Linebreak%20Media%20Pricing%20Banner.png" alt="Linebreak Media pricing and services">
+  </div>
+
+  <section class="intro">
+    <h1>LINEBREAK MEDIA PRICING</h1>
+    <p>
+      Professional sports journalism, creative content and practical training.
+      Explore our services and find the right option for your club, publication
+      or personal development.
+    </p>
+  </section>
+
+  <section class="jump-section">
+    <h2>TAP BUTTON TO NAVIGATE TO YOUR PRODUCT</h2>
+
+    <div class="jump-buttons">
+      <a href="#social-media">CLUB: SOCIAL MEDIA</a>
+      <a href="#website">CLUB: WEBSITE</a>
+      <a href="#press">LINEBREAK PRESS</a>
+      <a href="#academy">TRAINING ACADEMY</a>
+    </div>
+  </section>
+
+  <!-- ONE-TIME SOCIAL MEDIA BOOKING -->
+
+  <section class="pricing-section" id="social-media">
+    <div class="section-heading">
+      <span class="eyebrow">Linebreak Club: Social Media</span>
+      <h2>NEED CONTENT FOR JUST ONE MATCH? START HERE.</h2>
+      <p>
+        Not every club needs a monthly service. If you are looking for professional
+        coverage of an upcoming fixture or club event, our one-time booking gives
+        you a straightforward way to get started.
+      </p>
+    </div>
+
+    <div class="standalone-card">
+      <div class="price-card featured">
+        <h3>One-Time Content Booking</h3>
+        <p class="package-description">
+          Professional coverage for a single match or club event.
+        </p>
+
+        <div class="price">£60 <small>standard booking</small></div>
+
+        <div class="founding-price">
+          <strong>£50 introductory rate</strong>
+          Available on your club's first order only.
+        </div>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>One professionally written match report of approximately 400–600 words.</li>
+          <li>Three social media content items with accompanying captions, using photographs supplied by the club.</li>
+          <li>Editorial review and proofreading.</li>
+          <li>One round of minor amendments.</li>
+        </ul>
+
+        <p class="package-description">
+          The £50 introductory rate is available for a club's first order only.
+          Subsequent one-off bookings are charged at the standard £60 rate.
+        </p>
+
+        <a class="card-button" href="enquiries.html">BOOK A ONE-TIME SERVICE</a>
+      </div>
+    </div>
+
+    <h2 class="subheading">Monthly Social Media Packages</h2>
+
+    <div class="section-heading">
+      <p>
+        Keep your club visible, active and connected with professionally created
+        social media content. Choose the level of coverage that works for your club.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="price-card">
+        <h3>Socials Club Starter</h3>
+        <p class="package-description">Consistent content for clubs looking to build their online presence.</p>
+
+        <div class="price">£150 <small>/ month</small></div>
+        <div class="euro-price">Approximately €180 per month</div>
+
+        <div class="founding-price">
+          <strong>£135 / €162</strong>
+          Founding Partner first-month price.
+        </div>
+
+        <p class="per-item">
+          £12.50 per item standard · £11.25 per item founding
+        </p>
+
+        <h4>12 content items per month</h4>
+        <p class="package-description">Typically three items per week.</p>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>Branded matchday graphics and team announcements.</li>
+          <li>Results and score graphics.</li>
+          <li>Player features and club announcements.</li>
+          <li>Fixture promotions.</li>
+          <li>Sponsor recognition and community updates.</li>
+          <li>Captions and content planning.</li>
+          <li>Scheduling and publishing across agreed Instagram and Facebook accounts.</li>
+        </ul>
+
+        <p class="package-description">
+          No short-form video allocation is included in this package.
+        </p>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Socials Club Growth</h3>
+        <p class="package-description">More regular coverage, with video content included.</p>
+
+        <div class="price">£275 <small>/ month</small></div>
+        <div class="euro-price">Approximately €329 per month</div>
+
+        <div class="founding-price">
+          <strong>£250 / €299</strong>
+          Founding Partner first-month price.
+        </div>
+
+        <p class="per-item">
+          £11.46 per item standard · £10.42 per item founding
+        </p>
+
+        <h4>24 content items per month</h4>
+        <p class="package-description">Typically six items per week.</p>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>20 graphics, images or standard posts.</li>
+          <li>Four short-form videos per month, typically one per week.</li>
+          <li>Branded team selection, matchday and results graphics.</li>
+          <li>Player profiles and sponsor promotions.</li>
+          <li>Club announcements, fixtures and community content.</li>
+          <li>Short-form videos using club-supplied footage.</li>
+          <li>Edited video content formatted for Instagram Reels, Facebook Reels and TikTok.</li>
+          <li>Captions and content planning.</li>
+          <li>Scheduling and publishing across agreed Instagram and Facebook accounts.</li>
+        </ul>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
+      </div>
+
+      <div class="price-card featured">
+        <h3>Socials Club Pro</h3>
+        <p class="package-description">Comprehensive social media coverage for ambitious clubs.</p>
+
+        <div class="price">£410 <small>/ month</small></div>
+        <div class="euro-price">Approximately €491 per month</div>
+
+        <div class="founding-price">
+          <strong>£370 / €443</strong>
+          Founding Partner first-month price.
+        </div>
+
+        <p class="per-item">
+          £11.39 per item standard · £10.28 per item founding
+        </p>
+
+        <h4>36 content items per month</h4>
+        <p class="package-description">Typically nine items per week.</p>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>28 graphics, images or standard posts.</li>
+          <li>Eight short-form videos per month, typically two per week.</li>
+          <li>Branded team selections, results, fixtures and matchday graphics.</li>
+          <li>Player of the Week features, player profiles and new signing announcements.</li>
+          <li>Sponsor promotions and club campaigns.</li>
+          <li>Club news, events and community updates.</li>
+          <li>Short-form videos including interviews, matchday highlights using club-supplied footage, behind-the-scenes features, training-ground content, sponsor videos, match previews and post-match reaction.</li>
+          <li>Edited video content formatted for Instagram Reels, Facebook Reels and TikTok.</li>
+          <li>Captions, content calendars and content planning.</li>
+          <li>Scheduling and publishing across agreed Instagram and Facebook accounts.</li>
+          <li>Basic engagement and performance monitoring.</li>
+        </ul>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
+      </div>
+
+    </div>
+
+    <div class="info-panel">
+      <h3>Founding Partner Pricing</h3>
+      <p>
+        Founding Partner pricing applies to your first month only.
+        Standard monthly pricing applies from month two onwards.
+      </p>
+      <p>
+        All packages are based on the agreed monthly content allocation and
+        publishing arrangements for your club.
+      </p>
+    </div>
+  </section>
+
+  <!-- WEBSITE JOURNALISM -->
+
+  <section class="pricing-section" id="website">
+    <div class="section-heading">
+      <span class="eyebrow">Linebreak Club: Website</span>
+      <h2>PROFESSIONAL SPORTS JOURNALISM. YOUR CLUB'S STORY, TOLD PROPERLY.</h2>
+      <p>
+        Keep your club website active with regular, professionally written
+        sports content. From match previews and reports to interviews, features
+        and club news, choose the level of coverage that suits your club.
+      </p>
+    </div>
+
+    <div class="info-panel">
+      <h3>Website and Social Media Are Separate Services</h3>
+      <p>
+        LINEBREAK WEBSITE and LINEBREAK SOCIALS are separate services.
+        They can be purchased independently. There are no combined packages
+        or bundle discounts.
+      </p>
+      <p>
+        Founding Partner pricing applies to the first month only.
+        Standard monthly pricing applies from month two onwards.
+      </p>
+    </div>
+
+    <div class="cards" style="margin-top: 30px;">
+
+      <div class="price-card">
+        <h3>Website Club Starter</h3>
+        <p class="package-description">Regular website content to keep your club's story moving.</p>
+
+        <div class="price">£250 <small>/ month</small></div>
+        <div class="euro-price">Approximately €299 per month · Standard price</div>
+
+        <div class="founding-price">
+          <strong>£225 / €269</strong>
+          Founding Partner first-month price.
+        </div>
+
+        <p class="per-item">
+          £31.25 per article standard · £28.13 per article founding
+        </p>
+
+        <h4>Eight articles per month</h4>
+        <p class="package-description">Typically two articles per week.</p>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>Match previews and match reports.</li>
+          <li>Player and coach interviews.</li>
+          <li>Club news and announcements.</li>
+          <li>Player profiles and feature stories.</li>
+          <li>Sponsorship and community stories.</li>
+          <li>Professionally written website articles.</li>
+        </ul>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Website Club Growth</h3>
+        <p class="package-description">More frequent coverage across your club's teams and activities.</p>
+
+        <div class="price">£350 <small>/ month</small></div>
+        <div class="euro-price">Approximately €419 per month · Standard price</div>
+
+        <div class="founding-price">
+          <strong>£330 / €395</strong>
+          Founding Partner first-month price.
+        </div>
+
+        <p class="per-item">
+          £29.17 per article standard · £27.50 per article founding
+        </p>
+
+        <h4>12 articles per month</h4>
+        <p class="package-description">Typically three articles per week.</p>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>Match previews and reports covering senior men's and women's teams.</li>
+          <li>Player and coach interviews.</li>
+          <li>Club news and announcements.</li>
+          <li>Player profiles and in-depth features.</li>
+          <li>Sponsorship and community stories.</li>
+          <li>Additional coverage of club events and competitions.</li>
+          <li>Professionally written website articles.</li>
+        </ul>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
+      </div>
+
+      <div class="price-card featured">
+        <h3>Website Club Pro</h3>
+        <p class="package-description">Extensive, regular journalism across your club.</p>
+
+        <div class="price">£450 <small>/ month</small></div>
+        <div class="euro-price">Approximately €539 per month · Standard price</div>
+
+        <div class="founding-price">
+          <strong>£425 / €509</strong>
+          Founding Partner first-month price.
+        </div>
+
+        <p class="per-item">
+          £28.13 per article standard · £26.56 per article founding
+        </p>
+
+        <h4>16 articles per month</h4>
+        <p class="package-description">Typically four articles per week.</p>
+
+        <h4>What's included</h4>
+        <ul>
+          <li>Regular match previews and reports covering senior men's and women's teams.</li>
+          <li>Player and coach interviews.</li>
+          <li>In-depth player profiles and feature stories.</li>
+          <li>Club news and announcements.</li>
+          <li>Sponsorship and community stories.</li>
+          <li>Wider coverage of club events and competitions.</li>
+          <li>Professionally written website articles.</li>
+        </ul>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LINEBREAK PRESS -->
+
+  <section class="pricing-section" id="press">
+    <div class="section-heading">
+      <span class="eyebrow">Linebreak Press</span>
+      <h2>YOUR PUBLICATION. OUR NETWORK.</h2>
+      <p>
+        Access a knowledgeable network of freelance sports journalists and
+        content creators through Linebreak Press. We connect publications
+        with the right people to cover stories wherever they happen.
+      </p>
+    </div>
+
+    <div class="standalone-card">
+      <div class="price-card featured">
+        <h3>Publication Agency Fee</h3>
+        <p class="package-description">
+          A simple per-assignment fee. No monthly subscription.
+        </p>
+
+        <div class="price">£5 <small>per completed article assignment</small></div>
+
+        <h4>How it works</h4>
+        <ul>
+          <li>The publication pays the freelancer's agreed assignment fee separately.</li>
+          <li>The publication also pays Linebreak Media a £5 agency fee for each completed article assignment.</li>
+          <li>The freelancer receives 100% of their agreed assignment fee.</li>
+          <li>The £5 agency fee is paid separately to Linebreak Media.</li>
+          <li>There is no monthly subscription.</li>
+          <li>The freelancer's assignment fee is agreed separately according to the assignment.</li>
+        </ul>
+
+        <div class="founding-price">
+          <strong>50% OFF YOUR FIRST FIVE ASSIGNMENTS</strong>
+          Founding publications receive a 50% reduction on the Linebreak agency
+          fee for their first five completed article assignments.
+        </div>
+
+        <h4>Founding publication rates</h4>
+        <ul>
+          <li>Standard agency fee: £5 per completed article assignment.</li>
+          <li>Founding agency fee: £2.50 per completed article assignment.</li>
+          <li>After the first five completed assignments, the standard £5 fee applies.</li>
+        </ul>
+
+        <h4>Example assignment costs</h4>
+
+        <div class="comparison-example">
+          <div class="example-box">
+            <strong>Standard assignment</strong>
+            <p>Freelancer fee: £40</p>
+            <p>Agency fee: £5</p>
+            <p><strong>Total: £45</strong></p>
+          </div>
+
+          <div class="example-box">
+            <strong>Founding assignment</strong>
+            <p>Freelancer fee: £40</p>
+            <p>Discounted agency fee: £2.50</p>
+            <p><strong>Total: £42.50</strong></p>
+          </div>
+        </div>
+
+        <p class="package-description" style="margin-top: 18px;">
+          The £40 freelancer fee is an illustrative example only, not a fixed
+          assignment rate. Photography, video and other non-article assignments
+          may require a separately agreed agency fee. The £5 article fee does
+          not automatically apply to those assignments.
+        </p>
+
+        <a class="card-button" href="enquiries.html">SOURCE A FREELANCER</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING ACADEMY -->
+
+  <section class="pricing-section" id="academy">
+    <div class="section-heading">
+      <span class="eyebrow">Linebreak Journalism Training Academy</span>
+      <h2>LEARN THE SKILLS. BUILD YOUR CONFIDENCE. TELL BETTER SPORTS STORIES.</h2>
+      <p>
+        Practical sports journalism training designed to help aspiring
+        journalists develop their skills, build confidence and take the
+        next step in their media journey.
+      </p>
+    </div>
+
+    <div class="standalone-card">
+      <div class="price-card featured">
+        <h3>Individual Training Sessions</h3>
+        <p class="package-description">
+          Flexible, accessible training without a compulsory fixed course.
+        </p>
+
+        <div class="price">€10 <small>per person, per session</small></div>
+
+        <h4>What to expect</h4>
+        <ul>
+          <li>Typically one-hour sessions.</li>
+          <li>Delivered online.</li>
+          <li>Practical instruction, discussion and exercises.</li>
+          <li>Individual sessions can be booked as required.</li>
+          <li>No compulsory fixed ten-session course.</li>
+        </ul>
+
+        <div class="founding-price">
+          <strong>€5 per person, per session</strong>
+          Founding participant offer: the first 10 people to join receive
+          training at €5 per session for their first 10 sessions.
+        </div>
+
+        <h4>Founding participant offer</h4>
+        <ul>
+          <li>Standard price: €10 per person, per session.</li>
+          <li>Founding price: €5 per person, per session.</li>
+          <li>Potential saving of €50 per person across the first 10 sessions.</li>
+          <li>A saving of €5 per session.</li>
+          <li>Available to the first 10 participants, for their first 10 sessions only.</li>
+          <li>The standard €10 rate applies thereafter.</li>
+        </ul>
+
+        <p class="package-description">
+          Individual sessions can be booked. This is not a compulsory
+          fixed ten-session course.
+        </p>
+
+        <a class="card-button" href="enquiries.html">ENQUIRE ABOUT TRAINING</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERAL ENQUIRIES -->
+
+  <section class="contact-strip">
+    <h2>NOT SURE WHICH SERVICE IS RIGHT FOR YOU?</h2>
+    <p>
+      Whether you're a sports club looking to improve your coverage, a publication
+      searching for freelance talent or an aspiring journalist looking to develop
+      your skills, get in touch with Linebreak Media.
+    </p>
+    <a class="contact-button" href="enquiries.html">CONTACT LINEBREAK MEDIA</a>
+  </section>
+
+  <footer>
+    <h2>LINEBREAK. MEDIA</h2>
+    <p class="tagline">THE STORIES BEHIND THE SPORT.</p>
+
+    <div class="footer-contact">
+      <p>
+        Email:
+        <a href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+      </p>
+
+      <p>
+        UK: <a href="tel:+447546450845">+44 (0) 7546 450845</a>
+      </p>
+
+      <p>
+        Ireland: <a href="tel:+353838822024">+353 (0) 83 882 2024</a>
+      </p>
+
+      <p>
+        X:
+        <a href="https://x.com/TomSansomSport" target="_blank" rel="noopener noreferrer">@TomSansomSport</a>
+      </p>
+    </div>
+
+    <p class="copyright">
+      © 2026 Linebreak Media. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
