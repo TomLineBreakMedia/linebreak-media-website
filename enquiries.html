@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Enquiries | LINEBREAK MEDIA</title>
+
+  <meta name="description" content="Get in touch with Linebreak Media. Enquiries are now open for sports clubs, publications, journalists, photographers, content creators and aspiring sports writers.">
+
+  <style>
+    :root {
+      --navy: #071a33;
+      --blue: #12365c;
+      --gold: #d4a94f;
+      --white: #ffffff;
+      --light: #f2f5f8;
+      --text: #17283d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e5e9ee;
+      padding: 18px 5%;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .header-logo img {
+      display: block;
+      width: 190px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    .logo-section {
+      background: var(--white);
+      padding: 65px 5% 45px;
+      text-align: center;
+    }
+
+    .large-logo {
+      max-width: 650px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      text-align: center;
+      padding: 65px 5% 75px;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .intro-section h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    .intro-section .intro-copy {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: 17px;
+      color: #e5ebf2;
+    }
+
+    .intro-section .intro-copy p {
+      margin-bottom: 18px;
+    }
+
+    .contact-section {
+      padding: 75px 5%;
+      background: var(--light);
+    }
+
+    .contact-container {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .contact-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .contact-heading h2 {
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 38px);
+      margin-bottom: 12px;
+    }
+
+    .contact-heading p {
+      color: #526174;
+      font-size: 16px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .contact-card {
+      background: var(--white);
+      padding: 38px;
+      border-radius: 10px;
+      border-top: 5px solid var(--gold);
+      box-shadow: 0 5px 22px rgba(7, 26, 51, 0.07);
+    }
+
+    .contact-card h3 {
+      color: var(--navy);
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card p {
+      color: #526174;
+      margin-bottom: 17px;
+    }
+
+    .email-address {
+      display: inline-block;
+      color: var(--blue);
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: bold;
+      overflow-wrap: anywhere;
+      margin: 5px 0 18px;
+    }
+
+    .email-address:hover {
+      color: var(--gold);
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 24px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background 0.2s ease;
+      margin-top: 8px;
+    }
+
+    .contact-button:hover {
+      background: #e5bd69;
+    }
+
+    .phone-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .phone-number {
+      color: var(--navy);
+      font-weight: bold;
+      font-size: 19px;
+      margin: 18px 0 4px;
+    }
+
+    .phone-region {
+      color: #718096;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .social-section {
+      background: var(--white);
+      padding: 65px 5%;
+      text-align: center;
+    }
+
+    .social-section h2 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .social-section p {
+      color: #526174;
+      margin-bottom: 20px;
+    }
+
+    .social-link {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: bold;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 5px;
+    }
+
+    .social-link:hover {
+      color: var(--gold);
+    }
+
+    footer {
+      background: #041225;
+      color: var(--white);
+      text-align: center;
+      padding: 35px 5%;
+    }
+
+    .footer-brand {
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .footer-tagline {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .copyright {
+      color: #aab6c5;
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 13px 18px;
+      }
+
+      .header-logo img {
+        width: 170px;
+      }
+
+      .logo-section {
+        padding: 45px 5% 35px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 30px 25px;
+      }
+
+      .intro-section {
+        padding: 50px 6%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        font-size: 12px;
+      }
+
+      .contact-section {
+        padding: 55px 5%;
+      }
+
+      .contact-card {
+        padding: 26px 20px;
+      }
+
+      .phone-number {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="header-logo">
+        <img src="LM%20Linebreak%20Media%20Logo.png"
+             alt="Linebreak Media logo">
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="linebreak-club.html">Club</a>
+        <a href="linebreak-press.html">Press</a>
+        <a href="network.html">Join Network</a>
+        <a href="academy.html">Training Academy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="enquiries.html" class="active">Enquiries</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="logo-section">
+      <img
+        src="LM%20Linebreak%20Media%20Logo.png"
+        alt="LINEBREAK MEDIA – The Stories Behind The Sport"
+        class="large-logo">
+    </section>
+
+    <section class="intro-section">
+
+      <div class="section-label">GET IN TOUCH</div>
+
+      <h1>LET'S GET TALKING.<br>ENQUIRIES NOW OPEN.</h1>
+
+      <div class="intro-copy">
+
+        <p>
+          Linebreak Media is currently in its launch phase as we build our
+          founding network of sports clubs, publications, journalists and
+          aspiring sports writers.
+        </p>
+
+        <p>
+          Whether you're interested in working with Linebreak Club, sourcing
+          freelance talent through Linebreak Press, joining our contributor
+          network or taking part in our journalism training programme,
+          we'd love to hear from you.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="contact-section">
+
+      <div class="contact-container">
+
+        <div class="contact-heading">
+          <h2>HOW TO CONTACT US</h2>
+          <p>Choose the contact method that works best for you.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <h3>EMAIL TOM SANSOM</h3>
+
+            <a class="email-address"
+               href="mailto:tom.linebreakmedia@gmail.com">
+              tom.linebreakmedia@gmail.com
+            </a>
+
+            <p>
+              Send us an email outlining your enquiry and what you're
+              interested in. Whether you're a club, publication, journalist,
+              photographer, content creator or aspiring sports writer,
+              please tell us a little about what you're looking for.
+            </p>
+
+            <p>
+              I'll get back to you as soon as I can.
+            </p>
+
+            <a class="contact-button"
+               href="mailto:tom.linebreakmedia@gmail.com">
+              EMAIL TOM SANSOM
+            </a>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="phone-icon">📱</div>
+
+            <h3>MOBILE ENQUIRIES</h3>
+
+            <p>Mobile enquiries available at:</p>
+
+            <div class="phone-number">
+              +44 75456 450845
+            </div>
+
+            <div class="phone-region">UK</div>
+
+            <div class="phone-number">
+              +353 83 8822024
+            </div>
+
+            <div class="phone-region">Ireland</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="social-section">
+
+      <h2>CONTACT TOM SANSOM ON SOCIAL MEDIA</h2>
+
+      <p>
+        You can also get in touch through social media.
+      </p>
+
+      <a
+        class="social-link"
+        href="https://x.com/TomSansomSport"
+        target="_blank"
+        rel="noopener noreferrer">
+        CONTACT TOM ON X
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-brand">LINEBREAK MEDIA</div>
+
+    <div class="footer-tagline">
+      THE STORIES BEHIND THE SPORT.
+    </div>
+
+    <div class="copyright">
+      © 2026 Linebreak Media. All rights reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
