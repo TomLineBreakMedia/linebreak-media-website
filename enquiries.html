@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Enquiries | LINEBREAK MEDIA</title>
-
-  <meta name="description" content="Get in touch with Linebreak Media. Enquiries are now open for sports clubs, publications, journalists, photographers, content creators and aspiring sports writers.">
+  <title>Enquiries | Linebreak Media</title>
+  <meta name="description" content="Contact Linebreak Media about club content, freelance journalism, joining our contributor network or journalism training.">
 
   <style>
     :root {
@@ -20,40 +19,39 @@
     }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-    }
-
     header {
       background: var(--white);
-      border-bottom: 1px solid #e5e9ee;
-      padding: 18px 5%;
+      border-bottom: 1px solid #e5e9ef;
+      padding: 15px 25px;
     }
 
     .header-inner {
       max-width: 1200px;
       margin: auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 25px;
     }
 
-    .header-logo img {
+    .logo img {
       display: block;
-      width: 190px;
+      width: 220px;
       max-width: 100%;
       height: auto;
     }
@@ -63,13 +61,14 @@
       align-items: center;
       justify-content: flex-end;
       flex-wrap: wrap;
-      gap: 22px;
+      gap: 12px 20px;
     }
 
     nav a {
       color: var(--navy);
+      text-decoration: none;
       font-size: 13px;
-      font-weight: bold;
+      font-weight: 700;
       transition: color 0.2s ease;
     }
 
@@ -78,254 +77,380 @@
       color: var(--gold);
     }
 
-    .logo-section {
-      background: var(--white);
-      padding: 65px 5% 45px;
-      text-align: center;
-    }
-
-    .large-logo {
-      max-width: 650px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .intro-section {
-      background: linear-gradient(135deg, var(--navy), var(--blue));
+    .hero {
+      background: linear-gradient(120deg, var(--navy), var(--blue));
       color: var(--white);
       text-align: center;
-      padding: 65px 5% 75px;
+      padding: 85px 25px 90px;
     }
 
-    .section-label {
-      color: var(--gold);
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
-
-    .intro-section h1 {
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.15;
-      margin-bottom: 25px;
-      letter-spacing: 1px;
-    }
-
-    .intro-section .intro-copy {
+    .hero-inner {
       max-width: 850px;
-      margin: 0 auto;
-      font-size: 17px;
-      color: #e5ebf2;
-    }
-
-    .intro-section .intro-copy p {
-      margin-bottom: 18px;
-    }
-
-    .contact-section {
-      padding: 75px 5%;
-      background: var(--light);
-    }
-
-    .contact-container {
-      max-width: 1050px;
       margin: auto;
     }
 
-    .contact-heading {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .contact-heading h2 {
-      color: var(--navy);
-      font-size: clamp(28px, 4vw, 38px);
-      margin-bottom: 12px;
-    }
-
-    .contact-heading p {
-      color: #526174;
-      font-size: 16px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    .contact-card {
-      background: var(--white);
-      padding: 38px;
-      border-radius: 10px;
-      border-top: 5px solid var(--gold);
-      box-shadow: 0 5px 22px rgba(7, 26, 51, 0.07);
-    }
-
-    .contact-card h3 {
-      color: var(--navy);
-      font-size: 23px;
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2px;
       margin-bottom: 15px;
     }
 
-    .contact-card p {
-      color: #526174;
-      margin-bottom: 17px;
+    .hero h1 {
+      margin: 0 0 20px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.15;
+      font-weight: 900;
     }
 
-    .email-address {
-      display: inline-block;
-      color: var(--blue);
-      font-size: clamp(17px, 2.5vw, 21px);
-      font-weight: bold;
-      overflow-wrap: anywhere;
-      margin: 5px 0 18px;
+    .hero .gold-line {
+      width: 75px;
+      height: 4px;
+      background: var(--gold);
+      margin: 25px auto;
     }
 
-    .email-address:hover {
+    .hero p {
+      max-width: 730px;
+      margin: 0 auto 15px;
+      color: #e2e8f0;
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 75px 25px;
+    }
+
+    .section-inner {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .eyebrow {
+      color: #a77b25;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.2;
+      margin: 0 0 18px;
+    }
+
+    .section-heading p {
+      color: #5b6878;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .enquiry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .enquiry-card {
+      background: var(--white);
+      border: 1px solid #e0e6ed;
+      border-top: 4px solid var(--gold);
+      border-radius: 7px;
+      padding: 32px;
+      box-shadow: 0 8px 25px rgba(7, 26, 51, 0.06);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .enquiry-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(7, 26, 51, 0.11);
+    }
+
+    .card-number {
       color: var(--gold);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
 
-    .contact-button {
+    .enquiry-card h3 {
+      color: var(--navy);
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .enquiry-card p {
+      color: #596879;
+      font-size: 15px;
+      margin: 0 0 22px;
+      flex-grow: 1;
+    }
+
+    .card-examples {
+      color: #43546a;
+      font-size: 13px;
+      border-left: 3px solid var(--gold);
+      padding-left: 13px;
+      margin-bottom: 25px;
+    }
+
+    .button {
       display: inline-block;
       background: var(--gold);
       color: var(--navy);
-      padding: 14px 24px;
-      border-radius: 5px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      transition: background 0.2s ease;
-      margin-top: 8px;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      padding: 13px 21px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .contact-button:hover {
-      background: #e5bd69;
+    .button:hover {
+      background: #e4bd6d;
+      transform: translateY(-2px);
     }
 
-    .phone-icon {
-      font-size: 32px;
-      margin-bottom: 12px;
+    .form-section {
+      background: var(--light);
     }
 
-    .phone-number {
+    .form-layout {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .form-intro {
+      padding-top: 10px;
+    }
+
+    .form-intro .eyebrow {
+      color: #a77b25;
+    }
+
+    .form-intro h2 {
       color: var(--navy);
-      font-weight: bold;
-      font-size: 19px;
-      margin: 18px 0 4px;
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 20px;
     }
 
-    .phone-region {
-      color: #718096;
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .social-section {
-      background: var(--white);
-      padding: 65px 5%;
-      text-align: center;
-    }
-
-    .social-section h2 {
-      color: var(--navy);
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .social-section p {
-      color: #526174;
+    .form-intro p {
+      color: #596879;
+      font-size: 15px;
       margin-bottom: 20px;
     }
 
-    .social-link {
+    .form-intro .contact-email {
       display: inline-block;
-      color: var(--blue);
-      font-weight: bold;
-      border-bottom: 2px solid var(--gold);
-      padding-bottom: 5px;
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      overflow-wrap: anywhere;
     }
 
-    .social-link:hover {
+    .form-intro .contact-email:hover {
+      color: #a77b25;
+    }
+
+    .form-card {
+      background: var(--white);
+      border-radius: 7px;
+      padding: 38px;
+      box-shadow: 0 8px 30px rgba(7, 26, 51, 0.08);
+    }
+
+    .form-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      margin: 0 0 8px;
+    }
+
+    .form-card .form-description {
+      color: #718096;
+      font-size: 14px;
+      margin: 0 0 25px;
+    }
+
+    .form-group {
+      margin-bottom: 19px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d5dde6;
+      border-radius: 4px;
+      background: #fff;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 169, 79, 0.15);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #9aa5b2;
+    }
+
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #596879;
+      font-size: 12px;
+      margin: 5px 0 23px;
+    }
+
+    .consent input {
+      margin-top: 4px;
+      accent-color: var(--navy);
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 16px;
+      background: var(--navy);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background: var(--blue);
+    }
+
+    .form-note {
+      color: #8994a1;
+      font-size: 11px;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .final-cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 65px 25px;
+    }
+
+    .final-cta h2 {
+      font-size: 29px;
+      margin: 0 0 15px;
+    }
+
+    .final-cta p {
+      color: #d5deea;
+      max-width: 700px;
+      margin: 0 auto 22px;
+      font-size: 15px;
+    }
+
+    .final-cta a {
       color: var(--gold);
+      font-weight: 800;
+      text-decoration: none;
+      overflow-wrap: anywhere;
     }
 
     footer {
       background: #041225;
-      color: var(--white);
+      color: #c2cad6;
+      padding: 25px 20px;
       text-align: center;
-      padding: 35px 5%;
-    }
-
-    .footer-brand {
-      font-size: 23px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 5px;
-    }
-
-    .footer-tagline {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-    }
-
-    .copyright {
-      color: #aab6c5;
       font-size: 12px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 850px) {
       .header-inner {
         flex-direction: column;
       }
 
       nav {
         justify-content: center;
-        gap: 13px 18px;
+        gap: 12px 16px;
       }
 
-      .header-logo img {
-        width: 170px;
+      nav a {
+        font-size: 11px;
       }
 
-      .logo-section {
-        padding: 45px 5% 35px;
-      }
-
-      .contact-grid {
+      .form-layout {
         grid-template-columns: 1fr;
-      }
-
-      .contact-card {
-        padding: 30px 25px;
-      }
-
-      .intro-section {
-        padding: 50px 6%;
+        gap: 25px;
       }
     }
 
-    @media (max-width: 480px) {
-      nav a {
-        font-size: 12px;
+    @media (max-width: 650px) {
+      .logo img {
+        max-width: 190px;
       }
 
-      .contact-section {
-        padding: 55px 5%;
+      .hero {
+        padding: 60px 20px 65px;
       }
 
-      .contact-card {
-        padding: 26px 20px;
+      .section {
+        padding: 55px 20px;
       }
 
-      .phone-number {
-        font-size: 17px;
+      .enquiry-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .enquiry-card {
+        padding: 26px;
+      }
+
+      .form-card {
+        padding: 25px 20px;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
       }
     }
   </style>
@@ -335,158 +460,200 @@
 
   <header>
     <div class="header-inner">
-
-      <a href="index.html" class="header-logo">
-        <img src="LM%20Linebreak%20Media%20Logo.png"
-             alt="Linebreak Media logo">
+      <a href="index.html" class="logo">
+        <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
       </a>
 
       <nav>
         <a href="index.html">Home</a>
-        <a href="linebreak-club.html">Club</a>
-        <a href="linebreak-press.html">Press</a>
-        <a href="network.html">Join Network</a>
+        <a href="linebreak-club.html">Linebreak Club</a>
+        <a href="linebreak-press.html">Linebreak Press</a>
+        <a href="network.html">Join the Network</a>
         <a href="academy.html">Training Academy</a>
         <a href="pricing.html">Pricing</a>
         <a href="enquiries.html" class="active">Enquiries</a>
       </nav>
-
     </div>
   </header>
 
-  <main>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">LINEBREAK MEDIA</span>
 
-    <section class="logo-section">
-      <img
-        src="LM%20Linebreak%20Media%20Logo.png"
-        alt="LINEBREAK MEDIA – The Stories Behind The Sport"
-        class="large-logo">
-    </section>
+      <h1>LET'S START A CONVERSATION.</h1>
 
-    <section class="intro-section">
+      <div class="gold-line"></div>
 
-      <div class="section-label">GET IN TOUCH</div>
+      <p>Whether you're a club looking to improve its content, a publication searching for talented journalists, or someone looking to develop their skills, we'd love to hear from you.</p>
 
-      <h1>LET'S GET TALKING.<br>ENQUIRIES NOW OPEN.</h1>
+      <p>Choose the enquiry that best describes what you're looking for and tell us a little more.</p>
+    </div>
+  </section>
 
-      <div class="intro-copy">
+  <section class="section">
+    <div class="section-inner">
 
-        <p>
-          Linebreak Media is currently in its launch phase as we build our
-          founding network of sports clubs, publications, journalists and
-          aspiring sports writers.
-        </p>
-
-        <p>
-          Whether you're interested in working with Linebreak Club, sourcing
-          freelance talent through Linebreak Press, joining our contributor
-          network or taking part in our journalism training programme,
-          we'd love to hear from you.
-        </p>
-
+      <div class="section-heading">
+        <span class="eyebrow">HOW CAN WE HELP?</span>
+        <h2>CHOOSE YOUR ENQUIRY</h2>
+        <p>Linebreak Media works across four areas of sports journalism and digital content. Select the relevant section to get started.</p>
       </div>
 
-    </section>
+      <div class="enquiry-grid">
 
-    <section class="contact-section">
-
-      <div class="contact-container">
-
-        <div class="contact-heading">
-          <h2>HOW TO CONTACT US</h2>
-          <p>Choose the contact method that works best for you.</p>
+        <div class="enquiry-card">
+          <span class="card-number">01 / CLUB SERVICES</span>
+          <h3>Linebreak Club</h3>
+          <p>Looking to give your club's website and social media the attention they deserve? Tell us about your organisation and how we could help.</p>
+          <div class="card-examples">
+            Website content and match reports<br>
+            Social media management<br>
+            Monthly content packages<br>
+            One-off content requirements
+          </div>
+          <a href="#contact-form" class="button enquiry-link" data-type="Linebreak Club">MAKE A CLUB ENQUIRY</a>
         </div>
 
-        <div class="contact-grid">
-
-          <div class="contact-card">
-
-            <h3>EMAIL TOM SANSOM</h3>
-
-            <a class="email-address"
-               href="mailto:tom.linebreakmedia@gmail.com">
-              tom.linebreakmedia@gmail.com
-            </a>
-
-            <p>
-              Send us an email outlining your enquiry and what you're
-              interested in. Whether you're a club, publication, journalist,
-              photographer, content creator or aspiring sports writer,
-              please tell us a little about what you're looking for.
-            </p>
-
-            <p>
-              I'll get back to you as soon as I can.
-            </p>
-
-            <a class="contact-button"
-               href="mailto:tom.linebreakmedia@gmail.com">
-              EMAIL TOM SANSOM
-            </a>
-
+        <div class="enquiry-card">
+          <span class="card-number">02 / PUBLICATIONS</span>
+          <h3>Linebreak Press</h3>
+          <p>Are you a publication, editor or media organisation looking for reliable freelance sports journalists? We'd be interested in discussing your requirements.</p>
+          <div class="card-examples">
+            Freelance article commissions<br>
+            Match reporting and features<br>
+            Interview and editorial assignments<br>
+            Finding the right contributor
           </div>
+          <a href="#contact-form" class="button enquiry-link" data-type="Linebreak Press">MAKE A PRESS ENQUIRY</a>
+        </div>
 
-          <div class="contact-card">
-
-            <div class="phone-icon">📱</div>
-
-            <h3>MOBILE ENQUIRIES</h3>
-
-            <p>Mobile enquiries available at:</p>
-
-            <div class="phone-number">
-              +44 75456 450845
-            </div>
-
-            <div class="phone-region">UK</div>
-
-            <div class="phone-number">
-              +353 83 8822024
-            </div>
-
-            <div class="phone-region">Ireland</div>
-
+        <div class="enquiry-card">
+          <span class="card-number">03 / CONTRIBUTORS</span>
+          <h3>Join the Network</h3>
+          <p>Interested in contributing to Linebreak Media? We're always keen to hear from talented and enthusiastic people looking to build experience in sports media.</p>
+          <div class="card-examples">
+            Sports writers and journalists<br>
+            Photographers and videographers<br>
+            Social media contributors<br>
+            Aspiring and experienced freelancers
           </div>
+          <a href="#contact-form" class="button enquiry-link" data-type="Join the Network">EXPRESS YOUR INTEREST</a>
+        </div>
 
+        <div class="enquiry-card">
+          <span class="card-number">04 / DEVELOPMENT</span>
+          <h3>Training Academy</h3>
+          <p>Want to improve your journalism, develop your confidence or learn more about working in modern sports media? Find out more about our practical training sessions.</p>
+          <div class="card-examples">
+            Journalism workshops<br>
+            Sports writing and reporting<br>
+            Interviewing and storytelling<br>
+            Training topics and availability
+          </div>
+          <a href="#contact-form" class="button enquiry-link" data-type="Training Academy">MAKE A TRAINING ENQUIRY</a>
         </div>
 
       </div>
+    </div>
+  </section>
 
-    </section>
+  <section class="section form-section" id="contact-form">
+    <div class="section-inner">
 
-    <section class="social-section">
+      <div class="form-layout">
 
-      <h2>CONTACT TOM SANSOM ON SOCIAL MEDIA</h2>
+        <div class="form-intro">
+          <span class="eyebrow">GET IN TOUCH</span>
+          <h2>TELL US WHAT YOU'RE LOOKING FOR.</h2>
 
-      <p>
-        You can also get in touch through social media.
-      </p>
+          <p>Complete the enquiry form and provide a few details about what you need. Your message will help us understand your requirements and direct your enquiry to the right area of Linebreak Media.</p>
 
-      <a
-        class="social-link"
-        href="https://x.com/TomSansomSport"
-        target="_blank"
-        rel="noopener noreferrer">
-        CONTACT TOM ON X
-      </a>
+          <p>We'll aim to get back to you as soon as possible.</p>
 
-    </section>
+          <p>Prefer to contact us directly?</p>
 
-  </main>
+          <a class="contact-email" href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+        </div>
+
+        <div class="form-card">
+          <h3>ENQUIRY FORM</h3>
+          <p class="form-description">All fields marked with * are required.</p>
+
+          <!-- Replace YOUR_FORM_ID with your Formspree form ID before launch. -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+            <input type="hidden" name="_subject" value="New Linebreak Media Website Enquiry">
+
+            <div class="form-group">
+              <label for="name">Full name *</label>
+              <input type="text" id="name" name="Name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address *</label>
+              <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="organisation">Club, organisation or publication</label>
+              <input type="text" id="organisation" name="Organisation" placeholder="Name of your organisation (if applicable)">
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-type">What is your enquiry about? *</label>
+              <select id="enquiry-type" name="Enquiry Type" required>
+                <option value="" disabled selected>Select an enquiry category</option>
+                <option value="Linebreak Club">Linebreak Club – Club Services</option>
+                <option value="Linebreak Press">Linebreak Press – Publications</option>
+                <option value="Join the Network">Join the Network – Contributors</option>
+                <option value="Training Academy">Training Academy – Journalism Training</option>
+                <option value="General Enquiry">General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your message *</label>
+              <textarea id="message" name="Message" placeholder="Tell us a little about what you're looking for..." required></textarea>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="Consent" value="Agreed" required>
+              <span>I agree that Linebreak Media may use the information provided to respond to my enquiry.</span>
+            </label>
+
+            <button type="submit" class="submit-button">SUBMIT YOUR ENQUIRY</button>
+
+            <p class="form-note">Your information will only be used to deal with your enquiry.</p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="section-inner">
+      <h2>NOT SURE WHERE TO START?</h2>
+      <p>If you have a question that doesn't fit into one of the categories above, that's absolutely fine. Get in touch and we'll point you in the right direction.</p>
+      <a href="mailto:tom.linebreakmedia@gmail.com">TOM.LINEBREAKMEDIA@GMAIL.COM</a>
+    </div>
+  </section>
 
   <footer>
-
-    <div class="footer-brand">LINEBREAK MEDIA</div>
-
-    <div class="footer-tagline">
-      THE STORIES BEHIND THE SPORT.
-    </div>
-
-    <div class="copyright">
-      © 2026 Linebreak Media. All rights reserved.
-    </div>
-
+    © 2026 Linebreak Media. All rights reserved.
   </footer>
+
+  <script>
+    document.querySelectorAll(".enquiry-link").forEach(function(link) {
+      link.addEventListener("click", function() {
+        const enquiryType = this.getAttribute("data-type");
+        const dropdown = document.getElementById("enquiry-type");
+
+        dropdown.value = enquiryType;
+      });
+    });
+  </script>
 
 </body>
 </html>
