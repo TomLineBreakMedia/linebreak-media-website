@@ -18,13 +18,9 @@
       --text: #17283d;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -134,7 +130,6 @@
       margin: 0 auto 45px;
     }
 
-    /* Updated sub-heading colour */
     .section-heading .eyebrow {
       color: var(--blue);
     }
@@ -176,7 +171,6 @@
       box-shadow: 0 12px 30px rgba(7, 26, 51, 0.11);
     }
 
-    /* Updated numbered sub-heading colour */
     .card-number {
       color: var(--blue);
       font-size: 13px;
@@ -241,7 +235,6 @@
       padding-top: 10px;
     }
 
-    /* Updated sub-heading colour */
     .form-intro .eyebrow {
       color: var(--blue);
     }
@@ -460,6 +453,7 @@
 </head>
 
 <body>
+
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo">
@@ -481,13 +475,9 @@
   <section class="hero">
     <div class="hero-inner">
       <span class="eyebrow">LINEBREAK MEDIA</span>
-
       <h1>LET'S START A CONVERSATION.</h1>
-
       <div class="gold-line"></div>
-
       <p>Whether you're a club looking to improve its content, a publication searching for talented journalists, or someone looking to develop their skills, we'd love to hear from you.</p>
-
       <p>Choose the enquiry that best describes what you're looking for and tell us a little more.</p>
     </div>
   </section>
@@ -502,6 +492,7 @@
       </div>
 
       <div class="enquiry-grid">
+
         <div class="enquiry-card">
           <span class="card-number">01 / CLUB SERVICES</span>
           <h3>Linebreak Club</h3>
@@ -553,6 +544,7 @@
           </div>
           <a href="#contact-form" class="button enquiry-link" data-type="Training Academy">MAKE A TRAINING ENQUIRY</a>
         </div>
+
       </div>
     </div>
   </section>
@@ -567,6 +559,7 @@
           <h2>TELL US WHAT YOU'RE LOOKING FOR.</h2>
 
           <p>Complete the enquiry form and provide a few details about what you need. Your message will help us understand your requirements and direct your enquiry to the right area of Linebreak Media.</p>
+
           <p>We'll aim to get back to you as soon as possible.</p>
 
           <p>Prefer to contact us directly?</p>
@@ -578,8 +571,7 @@
           <h3>ENQUIRY FORM</h3>
           <p class="form-description">All fields marked with * are required.</p>
 
-          <!-- Replace YOUR_FORM_ID with your Formspree form ID before launch. -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form action="https://formspree.io/f/moeddzbg" method="POST">
 
             <input type="hidden" name="_subject" value="New Linebreak Media Website Enquiry">
 
@@ -648,7 +640,6 @@
       link.addEventListener("click", function() {
         const enquiryType = this.getAttribute("data-type");
         const dropdown = document.getElementById("enquiry-type");
-
         dropdown.value = enquiryType;
       });
     });
