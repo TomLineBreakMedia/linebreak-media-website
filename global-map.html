@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101114">
+  <title>Global Freelance Network</title>
+
+  <link
+    href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #101114;
+      color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topbar {
+      min-height: 90px;
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #292a2e;
+      background: #141519;
+    }
+
+    .heading {
+      margin: 0;
+      font-size: 29px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .heading span {
+      color: #c5a45b;
+    }
+
+    .tagline {
+      margin-top: 7px;
+      color: #999ba3;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .network-status {
+      color: #aeb1b9;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .network-status::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      margin-right: 9px;
+      border-radius: 50%;
+      background: #399bdb;
+      box-shadow: 0 0 9px #399bdb;
+    }
+
+    .intro {
+      padding: 25px 5% 19px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .intro h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .intro p {
+      margin: 7px 0 0;
+      color: #858892;
+      font-size: 13px;
+    }
+
+    .map-legend {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #aeb1b9;
+      font-size: 11px;
+    }
+
+    .legend-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #55b8ff;
+      box-shadow: 0 0 10px #238de9;
+    }
+
+    .legend-dot.medium {
+      width: 12px;
+      height: 12px;
+      background: #168de9;
+      box-shadow: 0 0 12px #168de9;
+    }
+
+    .legend-dot.large {
+      width: 15px;
+      height: 15px;
+      background: #0757bd;
+      box-shadow: 0 0 15px #168de9;
+    }
+
+    .map-layout {
+      position: relative;
+      display: flex;
+      margin: 0 3%;
+      min-height: 650px;
+      height: calc(100vh - 210px);
+      max-height: 850px;
+      border: 1px solid #34353b;
+      border-radius: 7px;
+      overflow: hidden;
+      background: #111318;
+    }
+
+    #map {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+    }
+
+    .side-panel {
+      width: 350px;
+      flex-shrink: 0;
+      background: #17191e;
+      border-left: 1px solid #35363c;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-header {
+      padding: 25px 23px 19px;
+      border-bottom: 1px solid #303137;
+    }
+
+    .panel-label {
+      color: #c5a45b;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .panel-header h2 {
+      margin: 12px 0 6px;
+      font-size: 23px;
+    }
+
+    .panel-header p {
+      margin: 0;
+      color: #9396a0;
+      font-size: 12px;
+    }
+
+    .panel-content {
+      padding: 20px 22px;
+    }
+
+    .empty-state {
+      padding: 35px 12px;
+      text-align: center;
+      color: #92949d;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .empty-state strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #e2e2e5;
+      font-size: 15px;
+    }
+
+    .filter-label {
+      display: block;
+      margin-bottom: 9px;
+      color: #c5a45b;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #41434b;
+      border-radius: 4px;
+      outline: none;
+      background: #22242a;
+      color: #f4f4f4;
+      font-size: 12px;
+    }
+
+    .contributor-count {
+      margin-bottom: 17px;
+      color: #9da0a9;
+      font-size: 12px;
+    }
+
+    .contributor-count strong {
+      color: #fff;
+    }
+
+    .profile-card {
+      padding: 16px 0;
+      display: flex;
+      gap: 13px;
+      border-top: 1px solid #34363c;
+    }
+
+    .profile-photo {
+      width: 62px;
+      height: 62px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      object-fit: cover;
+      background: #292c33;
+    }
+
+    .profile-placeholder {
+      width: 62px;
+      height: 62px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background: #292c33;
+      color: #c5a45b;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .profile-info {
+      min-width: 0;
+    }
+
+    .profile-info h3 {
+      margin: 2px 0 5px;
+      color: #f5f5f5;
+      font-size: 14px;
+    }
+
+    .profile-role {
+      margin-bottom: 7px;
+      color: #c5a45b;
+      font-size: 11px;
+    }
+
+    .profile-sports {
+      color: #a2a5ad;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .profile-bio {
+      margin-top: 9px;
+      color: #c1c3ca;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .map-message {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      max-width: 280px;
+      padding: 11px 14px;
+      border: 1px solid #41434b;
+      border-radius: 4px;
+      background: rgba(20, 22, 27, 0.94);
+      color: #bfc2ca;
+      font-size: 11px;
+      line-height: 1.5;
+      pointer-events: none;
+    }
+
+    .map-message.error {
+      border-color: #a35c5c;
+      color: #f1b5b5;
+    }
+
+    .maplibregl-popup-content {
+      padding: 13px 16px;
+      border: 1px solid #454851;
+      border-radius: 4px;
+      background: #191b20;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .maplibregl-popup-content strong {
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .maplibregl-popup-content span {
+      display: block;
+      margin-top: 5px;
+      color: #b6b8c0;
+      font-size: 11px;
+    }
+
+    .maplibregl-popup-tip {
+      border-top-color: #191b20 !important;
+      border-bottom-color: #191b20 !important;
+    }
+
+    .maplibregl-ctrl-group {
+      border: 1px solid #41434b !important;
+      background: #191b20 !important;
+    }
+
+    .maplibregl-ctrl-group button {
+      filter: invert(1);
+    }
+
+    .footer {
+      padding: 22px 5%;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: #777a83;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .footer span:last-child {
+      color: #c5a45b;
+    }
+
+    @media (max-width: 850px) {
+      .map-layout {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        flex-direction: column;
+      }
+
+      #map {
+        height: 480px;
+        flex: none;
+      }
+
+      .side-panel {
+        width: 100%;
+        min-height: 260px;
+        border-left: none;
+        border-top: 1px solid #35363c;
+      }
+
+      .network-status {
+        display: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .topbar {
+        padding: 20px 5%;
+      }
+
+      .heading {
+        font-size: 22px;
+      }
+
+      .intro {
+        padding: 20px 5%;
+      }
+
+      .map-layout {
+        margin: 0 3%;
+      }
+
+      #map {
+        height: 390px;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div>
+      <h1 class="heading">GLOBAL <span>FREELANCE</span> NETWORK</h1>
+      <div class="tagline">One network. Every sport. Everywhere.</div>
+    </div>
+
+    <div class="network-status">Global contributor network</div>
+  </header>
+
+  <section class="intro">
+    <div>
+      <h2>EXPLORE OUR GLOBAL NETWORK</h2>
+      <p>Select a location to discover the contributors based there.</p>
+    </div>
+
+    <div class="map-legend">
+      <span class="legend-dot"></span> Low
+      <span class="legend-dot medium"></span> Medium
+      <span class="legend-dot large"></span> High
+      <span>Contributor density</span>
+    </div>
+  </section>
+
+  <main class="map-layout">
+
+    <div id="map"></div>
+
+    <div class="map-message" id="map-message">
+      Loading global contributor locations...
+    </div>
+
+    <aside class="side-panel">
+
+      <div class="panel-header">
+        <div class="panel-label">Location directory</div>
+        <h2 id="location-title">Global Network</h2>
+        <p id="location-subtitle">
+          Select a blue hotspot on the map to explore.
+        </p>
+      </div>
+
+      <div class="panel-content" id="panel-content">
+        <div class="empty-state">
+          <strong>Discover our contributors</strong>
+          Choose a location on the world map to view its publicly approved contributors and their specialist sports.
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <footer class="footer">
+    <span>Global Freelance Network</span>
+    <span>International coverage. Local knowledge.</span>
+  </footer>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    // SUPABASE CONNECTION
+    const SUPABASE_URL = "https://jdwafuksblcyuzaajzix.supabase.co";
+
+    const SUPABASE_KEY = "sb_publishable_WVwUFsqXoYO9lS4fOk9amA_eTeRxDZU";
+
+    const supabaseClient = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
+
+    // MAP INITIALISATION
+    const map = new maplibregl.Map({
+      container: "map",
+      style: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+      center: [5, 20],
+      zoom: 1.4,
+      minZoom: 1,
+      maxZoom: 12,
+      attributionControl: true
+    });
+
+    map.addControl(
+      new maplibregl.NavigationControl(),
+      "top-right"
+    );
+
+    const message = document.getElementById("map-message");
+    const panelContent = document.getElementById("panel-content");
+
+    let currentContributors = [];
+    let currentLocationId = null;
+    let locations = [];
+
+    function showMessage(text, isError = false) {
+      message.textContent = text;
+      message.classList.toggle("error", isError);
+      message.style.display = "block";
+    }
+
+    function hideMessage() {
+      message.style.display = "none";
+    }
+
+    // LOAD LOCATIONS FROM SUPABASE
+    async function loadLocations() {
+      const { data, error } = await supabaseClient
+        .from("public_map_locations")
+        .select("id, city, country, latitude, longitude, contributor_count");
+
+      if (error) {
+        console.error("Location loading error:", error);
+        showMessage(
+          "Unable to load locations. Check the database connection and public permissions.",
+          true
+        );
+        return;
+      }
+
+      locations = data || [];
+
+      const validLocations = locations.filter(location =>
+        Number.isFinite(Number(location.latitude)) &&
+        Number.isFinite(Number(location.longitude))
+      );
+
+      const geojson = {
+        type: "FeatureCollection",
+        features: validLocations.map(location => ({
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [
+              Number(location.longitude),
+              Number(location.latitude)
+            ]
+          },
+          properties: {
+            id: location.id,
+            city: location.city,
+            country: location.country,
+            contributor_count: Number(location.contributor_count)
+          }
+        }))
+      };
+
+      if (map.getSource("contributors")) {
+        map.getSource("contributors").setData(geojson);
+      } else {
+        map.addSource("contributors", {
+          type: "geojson",
+          data: geojson
+        });
+
+        map.addLayer({
+          id: "contributor-glow",
+          type: "circle",
+          source: "contributors",
+          paint: {
+            "circle-radius": [
+              "interpolate", ["linear"],
+              ["get", "contributor_count"],
+              1, 13,
+              5, 21,
+              10, 29,
+              25, 39,
+              50, 49
+            ],
+            "circle-color": "#168de9",
+            "circle-opacity": 0.22,
+            "circle-blur": 1
+          }
+        });
+
+        map.addLayer({
+          id: "contributor-points",
+          type: "circle",
+          source: "contributors",
+          paint: {
+            "circle-radius": [
+              "interpolate", ["linear"],
+              ["get", "contributor_count"],
+              1, 5,
+              5, 7,
+              10, 9,
+              25, 12,
+              50, 15
+            ],
+            "circle-color": [
+              "interpolate", ["linear"],
+              ["get", "contributor_count"],
+              1, "#55b8ff",
+              5, "#168de9",
+              15, "#0872d5",
+              30, "#0757bd",
+              50, "#073d91"
+            ],
+            "circle-stroke-width": 1.5,
+            "circle-stroke-color": "#a9ddff",
+            "circle-opacity": 0.95
+          }
+        });
+
+        map.on("mouseenter", "contributor-points", () => {
+          map.getCanvas().style.cursor = "pointer";
+        });
+
+        map.on("mouseleave", "contributor-points", () => {
+          map.getCanvas().style.cursor = "";
+        });
+
+        map.on("click", "contributor-points", async event => {
+          const feature = event.features[0];
+          const coordinates = feature.geometry.coordinates.slice();
+          const properties = feature.properties;
+
+          new maplibregl.Popup({ offset: 12 })
+            .setLngLat(coordinates)
+            .setHTML(
+              `<strong>${escapeHTML(properties.city)}, ${escapeHTML(properties.country)}</strong>
+               <span>${Number(properties.contributor_count)} contributors · Select to explore</span>`
+            )
+            .addTo(map);
+
+          await selectLocation(properties.id);
+        });
+      }
+
+      if (validLocations.length > 0) {
+        hideMessage();
+      } else {
+        showMessage(
+          "No publicly approved contributor locations yet. Approved locations will appear here automatically."
+        );
+      }
+    }
+
+    // LOAD PROFILES FOR SELECTED LOCATION
+    async function selectLocation(locationId) {
+      currentLocationId = locationId;
+
+      const location = locations.find(item => item.id === locationId);
+
+      if (!location) return;
+
+      document.getElementById("location-title").textContent =
+        location.city;
+
+      document.getElementById("location-subtitle").textContent =
+        location.country;
+
+      panelContent.innerHTML = `
+        <label class="filter-label" for="profession-filter">
+          Filter by profession
+        </label>
+
+        <select id="profession-filter">
+          <option value="all">All professions</option>
+        </select>
+
+        <div class="contributor-count" id="contributor-count">
+          Loading contributors...
+        </div>
+
+        <div id="profiles-list"></div>
+      `;
+
+      const { data, error } = await supabaseClient
+        .from("public_contributors_by_location")
+        .select("id, full_name, professional_role, sports, biography, profile_photo_url, location_id, city, country, is_primary")
+        .eq("location_id", locationId);
+
+      if (error) {
+        console.error("Contributor loading error:", error);
+        document.getElementById("profiles-list").textContent =
+          "Unable to load contributor profiles.";
+        return;
+      }
+
+      currentContributors = data || [];
+
+      const professions = [
+        ...new Set(
+          currentContributors
+            .map(person => person.professional_role)
+            .filter(Boolean)
+        )
+      ].sort();
+
+      const filter = document.getElementById("profession-filter");
+
+      professions.forEach(profession => {
+        const option = document.createElement("option");
+        option.value = profession;
+        option.textContent = profession;
+        filter.appendChild(option);
+      });
+
+      filter.addEventListener("change", renderProfiles);
+
+      renderProfiles();
+    }
+
+    // DISPLAY PROFILES
+    function renderProfiles() {
+      const filter = document.getElementById("profession-filter");
+      const selectedProfession = filter ? filter.value : "all";
+
+      const filtered = currentContributors.filter(person =>
+        selectedProfession === "all" ||
+        person.professional_role === selectedProfession
+      );
+
+      document.getElementById("contributor-count").innerHTML =
+        `<strong>${filtered.length}</strong> publicly approved contributor${filtered.length === 1 ? "" : "s"}`;
+
+      const profilesList = document.getElementById("profiles-list");
+
+      if (filtered.length === 0) {
+        profilesList.innerHTML = `
+          <div class="empty-state">
+            No contributors found for this profession.
+          </div>
+        `;
+        return;
+      }
+
+      profilesList.innerHTML = filtered.map(person => {
+        const initials = person.full_name
+          .split(/\s+/)
+          .map(part => part.charAt(0))
+          .slice(0, 2)
+          .join("")
+          .toUpperCase();
+
+        const photo = person.profile_photo_url
+          ? `<img class="profile-photo" src="${escapeHTML(person.profile_photo_url)}" alt="${escapeHTML(person.full_name)}" loading="lazy">`
+          : `<div class="profile-placeholder">${escapeHTML(initials)}</div>`;
+
+        const sports = Array.isArray(person.sports)
+          ? person.sports.join(", ")
+          : "";
+
+        return `
+          <article class="profile-card">
+            ${photo}
+            <div class="profile-info">
+              <h3>${escapeHTML(person.full_name)}</h3>
+              <div class="profile-role">
+                ${escapeHTML(person.professional_role || "Contributor")}
+              </div>
+              <div class="profile-sports">
+                ${escapeHTML(sports)}
+              </div>
+              ${person.biography
+                ? `<div class="profile-bio">${escapeHTML(person.biography)}</div>`
+                : ""}
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    // SAFELY DISPLAY DATABASE TEXT
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[character]);
+    }
+
+    // STARTUP
+    map.on("load", async () => {
+      try {
+        await loadLocations();
+      } catch (error) {
+        console.error(error);
+        showMessage("Something went wrong while loading the map.", true);
+      }
+    });
+
+  </script>
+
+</body>
+</html>
