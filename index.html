@@ -143,7 +143,8 @@ nav a:hover { color: var(--gold); }
 }
 .founding-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(0, 600px);
+  justify-content: center;
   gap: 25px;
   max-width: 950px;
   margin: 35px auto 0;
@@ -283,7 +284,7 @@ footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
 <section class="section founding">
   <h2>BECOME A FOUNDING PARTNER</h2>
   <div class="gold-line"></div>
-  <p class="section-intro">Help us build something from the ground up. Join the first clubs and publications to become part of the Linebreak Media network.</p>
+  <p class="section-intro">Help us build something from the ground up. Join the first clubs to become part of the Linebreak Media network.</p>
 
   <div class="founding-grid">
     <div class="offer">
@@ -291,12 +292,6 @@ footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
       <h3>10 FOUNDING CLUB PLACES</h3>
       <p>Receive approximately 10% off monthly packages for your first month, plus access to a special £50 first one-off booking offer.</p>
       <a href="pricing.html" class="button">Explore Club Pricing</a>
-    </div>
-    <div class="offer">
-      <strong>LINEBREAK PRESS</strong>
-      <h3>10 FOUNDING PUBLICATION PLACES</h3>
-      <p>Receive 50% off Linebreak's agency fee on your first completed assignment.</p>
-      <a href="pricing.html" class="button">Explore Press Pricing</a>
     </div>
   </div>
 </section>
