@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Freelance Network | Linebreak Media</title>
-<meta name="description" content="Explore an international network of freelance sports journalists, photographers and content creators.">
+<title>Global Freelance Network | BREAKMATCH Sports Media</title>
+<meta name="description" content="Explore the international BREAKMATCH network of freelance sports journalists, photographers and content creators.">
 
 <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
 
@@ -34,7 +35,7 @@ a { text-decoration: none; color: inherit; }
 header {
   background: #ffffff;
   color: var(--navy);
-  padding: 20px 6%;
+  padding: 0 6% 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -43,11 +44,20 @@ header {
   border-bottom: 1px solid #e5eaf0;
 }
 
+.logo {
+  display: inline-block;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
 .logo img {
-  max-width: 220px;
-  max-height: 70px;
+  max-width: 320px;
+  max-height: 92px;
   width: auto;
-  height: auto;
+  height: 92px;
+  object-fit: contain;
   display: block;
 }
 
@@ -407,11 +417,19 @@ footer p {
   header {
     justify-content: center;
     text-align: center;
+    padding: 0;
+  }
+
+  .logo img {
+    max-width: 290px;
+    max-height: 82px;
+    height: 82px;
   }
 
   nav {
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
+    padding: 12px 15px 16px;
   }
 
   nav a {
@@ -439,10 +457,6 @@ footer p {
 }
 
 @media(max-width: 500px) {
-  .logo img {
-    max-width: 190px;
-  }
-
   .network-hero {
     padding: 48px 18px;
   }
@@ -468,8 +482,8 @@ footer p {
 
 <header>
   <a href="index.html" class="logo">
-    <img src="LM%20Linebreak%20Media%20Logo.png"
-         alt="Linebreak Media Logo">
+    <img src="BreakMatch%20Sports%20Media%20Logo.png"
+         alt="BREAKMATCH Sports Media Logo">
   </a>
 
   <nav>
@@ -545,9 +559,9 @@ footer p {
 <!-- WEBSITE FOOTER -->
 
 <footer>
-  <div class="footer-logo">LINEBREAK<span>.</span>MEDIA</div>
+  <div class="footer-logo">BREAKMATCH<span>.</span>SPORTS MEDIA</div>
   <p>THE STORIES BEHIND THE SPORT.</p>
-  <p>© 2026 Linebreak Media. All rights reserved.</p>
+  <p>© 2026 BREAKMATCH Sports Media. All rights reserved.</p>
 </footer>
 
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
