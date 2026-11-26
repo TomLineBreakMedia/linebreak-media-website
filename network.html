@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join the Linebreak Network | Linebreak Media</title>
-  <meta name="description" content="Join the Linebreak Media network of freelance sports journalists, photographers and content creators.">
+  <title>Join the BREAKMATCH Network | BREAKMATCH Sports Media</title>
+  <meta name="description" content="Join the BREAKMATCH Sports Media network of freelance sports journalists, photographers and content creators.">
 
   <style>
     :root {
-      --navy: #101d32;
-      --navy-light: #192b46;
-      --gold: #d5ad57;
+      --navy: #071a33;
+      --navy-light: #12365c;
+      --gold: #d4a94f;
       --white: #ffffff;
-      --light: #f4f5f7;
-      --text: #283447;
+      --light: #f2f5f8;
+      --text: #17283d;
       --muted: #667085;
     }
 
@@ -31,26 +31,42 @@
       line-height: 1.7;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     header {
-      background: var(--white);
-      padding: 16px 5%;
-      border-bottom: 1px solid #e8e8e8;
+      background: #ffffff;
+      color: var(--navy);
+      padding: 0 6% 0 0;
+      border-bottom: 1px solid #e5eaf0;
     }
 
     .header-inner {
-      max-width: 1200px;
+      width: 100%;
       margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: inline-block;
+      line-height: 0;
+      padding: 0;
+      margin: 0;
+      flex-shrink: 0;
     }
 
     .logo img {
-      max-width: 220px;
-      max-height: 70px;
+      max-width: 320px;
+      max-height: 92px;
       width: auto;
-      height: auto;
+      height: 92px;
+      object-fit: contain;
       display: block;
     }
 
@@ -58,20 +74,20 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
-      gap: 18px;
+      gap: 19px;
     }
 
     nav a {
       color: var(--navy);
-      text-decoration: none;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.7px;
       text-transform: uppercase;
     }
 
-    nav a:hover {
-      color: #b58b37;
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
     }
 
     .hero {
@@ -107,7 +123,7 @@
       max-width: 790px;
       margin: 28px auto 0;
       padding: 17px 20px;
-      border: 1px solid rgba(213, 173, 87, 0.65);
+      border: 1px solid rgba(212, 169, 79, 0.65);
       color: #f0e5cc;
       font-size: 14px;
     }
@@ -274,33 +290,59 @@
     }
 
     footer {
-      background: #091322;
+      background: #041225;
       color: #c2cad6;
-      padding: 25px 20px;
+      padding: 30px 20px;
       text-align: center;
       font-size: 12px;
     }
 
+    footer .footer-logo {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    footer .footer-logo span {
+      color: var(--gold);
+    }
+
+    footer p {
+      color: #aebdce;
+      margin-top: 8px;
+    }
+
     @media (max-width: 800px) {
+      header {
+        padding: 0;
+      }
+
       .header-inner {
         flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 0;
+      }
+
+      .logo img {
+        max-width: 290px;
+        max-height: 82px;
+        height: 82px;
       }
 
       nav {
         justify-content: center;
-        gap: 12px 16px;
+        gap: 14px;
+        padding: 12px 15px 16px;
       }
 
       nav a {
-        font-size: 11px;
+        font-size: 10px;
       }
     }
 
     @media (max-width: 600px) {
-      .logo img {
-        max-width: 190px;
-      }
-
       .hero {
         padding: 55px 20px;
       }
@@ -321,7 +363,7 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
+        <img src="BreakMatch%20Sports%20Media%20Logo.png" alt="BREAKMATCH Sports Media Logo">
       </a>
 
       <nav>
@@ -329,7 +371,7 @@
         <a href="linebreak-club.html">Club</a>
         <a href="linebreak-press.html">Press</a>
         <a href="global-map.html">Global Map</a>
-        <a href="network.html">Join Network</a>
+        <a href="network.html" class="active">Join Network</a>
         <a href="academy.html">Training Academy</a>
         <a href="pricing.html">Pricing</a>
         <a href="enquiries.html">Enquiries</a>
@@ -338,10 +380,10 @@
   </header>
 
   <section class="hero">
-    <h1>JOIN THE LINEBREAK NETWORK</h1>
+    <h1>JOIN THE BREAKMATCH NETWORK</h1>
     <div class="tagline">YOUR SPORT. YOUR EXPERIENCE. YOUR NEXT OPPORTUNITY.</div>
 
-    <p>Linebreak Media is building an international network of freelance sports journalists, photographers and content creators.</p>
+    <p>BREAKMATCH Sports Media is building an international network of freelance sports journalists, photographers and content creators.</p>
 
     <p>We're looking to connect with people who understand their sport, know their local sporting communities and want to contribute to professional sports coverage across different publications and platforms.</p>
 
@@ -357,7 +399,7 @@
       <h2>BECOME A FOUNDING CONTRIBUTOR</h2>
       <div class="gold-line"></div>
 
-      <p>As Linebreak Media enters its launch phase, we're inviting prospective contributors to express their interest in becoming part of our founding network.</p>
+      <p>As BREAKMATCH Sports Media enters its launch phase, we're inviting prospective contributors to express their interest in becoming part of our founding network.</p>
 
       <h3>WE'RE LOOKING FOR</h3>
 
@@ -384,7 +426,7 @@
       <p>During the launch phase, prospective contributors should contact Tom Sansom directly by email.</p>
 
       <p><strong>Email:</strong></p>
-      <a class="email-highlight" href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+      <a class="email-highlight" href="mailto:tommsansom@gmail.com">tommsansom@gmail.com</a>
 
       <ul class="details-list">
         <li>
@@ -405,7 +447,7 @@
         </li>
         <li>
           <strong>A LITTLE ABOUT YOURSELF</strong>
-          Introduce yourself and explain why you'd like to become part of Linebreak Media.
+          Introduce yourself and explain why you'd like to become part of BREAKMATCH Sports Media.
         </li>
       </ul>
     </div>
@@ -415,13 +457,15 @@
     <h2>YOUR NETWORK. YOUR OPPORTUNITIES.</h2>
     <div class="gold-line"></div>
 
-    <p>We're building Linebreak Media from the ground up, and we want knowledgeable, enthusiastic contributors to help shape its future. If you're interested in becoming one of our founding contributors, send Tom an email and introduce yourself at <a href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>.</p>
+    <p>We're building BREAKMATCH Sports Media from the ground up, and we want knowledgeable, enthusiastic contributors to help shape its future. If you're interested in becoming one of our founding contributors, send Tom an email and introduce yourself at <a href="mailto:tommsansom@gmail.com">tommsansom@gmail.com</a>.</p>
 
     <p class="disclaimer">Expressions of interest will be reviewed as the founding network develops. Getting in touch does not guarantee paid assignments or immediate work.</p>
   </section>
 
   <footer>
-    © 2026 Linebreak Media. All rights reserved.
+    <div class="footer-logo">BREAKMATCH<span>.</span>SPORTS MEDIA</div>
+    <p>THE STORIES BEHIND THE SPORT.</p>
+    <p>© 2026 BREAKMATCH Sports Media. All rights reserved.</p>
   </footer>
 
 </body>
