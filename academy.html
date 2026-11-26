@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linebreak Journalism Training | Linebreak Media</title>
+  <title>BREAKMATCH Journalism Training | BREAKMATCH Sports Media</title>
   <meta name="description" content="Practical online sports journalism workshops led by professional sports journalist Tom Sansom. Learn the skills, build your confidence and tell better stories.">
 
   <style>
     :root {
-      --navy: #101d32;
-      --navy-light: #192b46;
-      --gold: #d5ad57;
+      --navy: #071a33;
+      --navy-light: #12365c;
+      --gold: #d4a94f;
       --white: #ffffff;
-      --light: #f4f5f7;
-      --text: #283447;
+      --light: #f2f5f8;
+      --text: #17283d;
       --muted: #667085;
     }
 
@@ -33,25 +33,32 @@
 
     header {
       background: var(--white);
-      padding: 16px 5%;
+      padding: 0 6% 0 0;
       border-bottom: 1px solid #e8e8e8;
     }
 
     .header-inner {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 25px;
+      min-height: 92px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
     }
 
     .logo img {
-      max-width: 220px;
-      max-height: 70px;
+      height: 92px;
+      max-width: 320px;
       width: auto;
-      height: auto;
       display: block;
+      object-fit: contain;
     }
 
     nav {
@@ -70,8 +77,9 @@
       text-transform: uppercase;
     }
 
-    nav a:hover {
-      color: #b58b37;
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
     }
 
     .hero {
@@ -160,7 +168,7 @@
 
     .eyebrow {
       display: block;
-      color: #071a33;
+      color: var(--navy);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 1.5px;
@@ -217,7 +225,7 @@
     }
 
     .tutor-role {
-      color: #071a33;
+      color: var(--navy);
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 0.8px;
@@ -272,7 +280,7 @@
     }
 
     .card-number {
-      color: #071a33;
+      color: var(--navy);
       font-size: 31px;
       font-weight: 800;
       margin-bottom: 12px;
@@ -285,7 +293,7 @@
     }
 
     .audience-card h4 {
-      color: #071a33;
+      color: var(--navy);
       font-size: 12px;
       letter-spacing: 0.6px;
       margin-bottom: 15px;
@@ -330,7 +338,7 @@
     }
 
     .lesson-number {
-      color: #071a33;
+      color: var(--navy);
       font-size: 28px;
       font-weight: 800;
       margin-bottom: 10px;
@@ -527,8 +535,20 @@
     }
 
     @media (max-width: 800px) {
+      header {
+        padding: 0;
+      }
+
       .header-inner {
         flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+        padding: 0 15px 15px;
+      }
+
+      .logo img {
+        height: 82px;
+        max-width: 290px;
       }
 
       nav {
@@ -556,10 +576,6 @@
     }
 
     @media (max-width: 600px) {
-      .logo img {
-        max-width: 190px;
-      }
-
       .hero {
         padding: 50px 20px 60px;
       }
@@ -590,7 +606,7 @@
   <header>
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo">
+        <img src="BreakMatch%20Sports%20Media%20Logo.png" alt="BREAKMATCH Sports Media Logo">
       </a>
 
       <nav>
@@ -599,7 +615,7 @@
         <a href="linebreak-press.html">Press</a>
         <a href="global-map.html">Global Map</a>
         <a href="network.html">Join Network</a>
-        <a href="academy.html">Training Academy</a>
+        <a href="academy.html" class="active">Training Academy</a>
         <a href="pricing.html">Pricing</a>
         <a href="enquiries.html">Enquiries</a>
       </nav>
@@ -607,9 +623,9 @@
   </header>
 
   <section class="hero">
-    <img class="academy-logo" src="LJTA%20Journalism%20Training%20Academy%20Logo.png" alt="Linebreak Journalism Training Academy Logo">
+    <img class="academy-logo" src="LJTA%20Journalism%20Training%20Academy%20Logo.png" alt="BREAKMATCH Journalism Training Academy Logo">
 
-    <h1>LINEBREAK JOURNALISM TRAINING</h1>
+    <h1>BREAKMATCH JOURNALISM TRAINING</h1>
 
     <div class="tagline">
       LEARN THE SKILLS.<br>
@@ -619,13 +635,13 @@
 
     <p>Sports journalism is about more than writing an article. You find the story, ask the right questions, report under pressure and understand how to stand out in a digital world.</p>
 
-    <p>The Linebreak Journalism Training Programme provides practical online workshops designed to help aspiring and developing sports journalists build the skills, confidence and independence needed to succeed in modern sports media.</p>
+    <p>The BREAKMATCH Journalism Training Programme provides practical online workshops designed to help aspiring and developing sports journalists build the skills, confidence and independence needed to succeed in modern sports media.</p>
 
-    <p>Sessions are led by professional sports journalist and Linebreak Media Founder Tom Sansom.</p>
+    <p>Sessions are led by professional sports journalist and BREAKMATCH Sports Media Founder Tom Sansom.</p>
 
     <p>The workshops combine presented teaching, group discussions, practical exercises and consistent feedback, that participants can apply directly to their own journalism.</p>
 
-    <a class="button" href="mailto:tom.linebreakmedia@gmail.com?subject=Enquiry%20about%20Journalism%20Training">ENQUIRE ABOUT TRAINING</a>
+    <a class="button" href="mailto:tommsansom@gmail.com?subject=Enquiry%20about%20Journalism%20Training">ENQUIRE ABOUT TRAINING</a>
   </section>
 
   <section class="section tutor-section">
@@ -640,7 +656,7 @@
       <div class="tutor-layout">
 
         <div class="tutor-photo-wrap">
-          <img class="tutor-photo" src="Linkedin%20new%20PP.jpg" alt="Tom Sansom, Founder and Lead Tutor of Linebreak Journalism Training">
+          <img class="tutor-photo" src="Linkedin%20new%20PP.jpg" alt="Tom Sansom, Founder and Lead Tutor of BREAKMATCH Journalism Training">
         </div>
 
         <div class="tutor-copy">
@@ -723,7 +739,7 @@
         <h2>TEN FOUNDATIONS. PRACTICAL SKILLS. REAL-WORLD APPLICATION.</h2>
         <div class="gold-line"></div>
 
-        <p>The Linebreak Journalism Training Programme covers the essential skills needed to develop as a modern sports journalist and digital content creator. From writing and reporting to pitching, interviewing and building your own brand, each session is designed to give you practical knowledge you can put into action.</p>
+        <p>The BREAKMATCH Journalism Training Programme covers the essential skills needed to develop as a modern sports journalist and digital content creator. From writing and reporting to pitching, interviewing and building your own brand, each session is designed to give you practical knowledge you can put into action.</p>
       </div>
 
       <div class="lesson-grid">
@@ -798,7 +814,7 @@
       <h2>BUILT TO DEVELOP. SHAPED BY YOU.</h2>
       <div class="gold-line"></div>
 
-      <p>The Linebreak Journalism Training Programme is launching in its beta stage. That means we're not simply delivering a fixed course and expecting everyone to follow the same path.</p>
+      <p>The BREAKMATCH Journalism Training Programme is launching in its beta stage. That means we're not simply delivering a fixed course and expecting everyone to follow the same path.</p>
 
       <p>We want the programme to develop alongside the people taking part. Your feedback, interests and experiences will help shape future sessions. If there are topics you'd like to explore in greater detail, skills you want to revisit or areas you feel are missing, we want to hear about them.</p>
 
@@ -843,7 +859,7 @@
       <p>Whether you have an idea for a future workshop, want to revisit a previous subject or simply have feedback about the programme, we'd love to hear from you.</p>
 
       <p><strong>SHARE YOUR FEEDBACK TO:</strong></p>
-      <a class="feedback-email" href="mailto:tom.linebreakmedia@gmail.com">TOM.LINEBREAKMEDIA@GMAIL.COM</a>
+      <a class="feedback-email" href="mailto:tommsansom@gmail.com">TOMMSANSOM@GMAIL.COM</a>
     </div>
   </section>
 
@@ -857,19 +873,19 @@
 
         <div class="price-card">
           <h3>STANDARD WORKSHOP PRICE</h3>
-          <div class="price">€10</div>
+          <div class="price">£10</div>
           <p>Per person, per session.</p>
         </div>
 
         <div class="price-card founding">
           <h3>FOUNDING PARTICIPANT PRICE</h3>
-          <div class="price">€5</div>
+          <div class="price">£5</div>
           <p>Per person, per session. For the first 10 people who express interest, applied to their first 10 sessions.</p>
         </div>
 
         <div class="price-card">
           <h3>POTENTIAL SAVING ACROSS 10 SESSIONS</h3>
-          <div class="price">€50</div>
+          <div class="price">£50</div>
           <p>A limited introductory offer for the initial launch phase.</p>
         </div>
 
@@ -885,16 +901,16 @@
     <div class="section-inner">
       <h2>READY TO DEVELOP YOUR JOURNALISM?</h2>
 
-      <p>Linebreak Journalism Training is currently in its foundation launch phase. We're inviting the first prospective participants to express their interest and help shape the development of the programme. To enquire about upcoming workshops, the founding participant offer or specific training topics, contact Tom Sansom directly.</p>
+      <p>BREAKMATCH Journalism Training is currently in its foundation launch phase. We're inviting the first prospective participants to express their interest and help shape the development of the programme. To enquire about upcoming workshops, the founding participant offer or specific training topics, contact Tom Sansom directly.</p>
 
-      <a class="email" href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+      <a class="email" href="mailto:tommsansom@gmail.com">tommsansom@gmail.com</a>
 
-      <a class="button" href="mailto:tom.linebreakmedia@gmail.com?subject=Enquiry%20about%20Journalism%20Training">ENQUIRE ABOUT TRAINING</a>
+      <a class="button" href="mailto:tommsansom@gmail.com?subject=Enquiry%20about%20Journalism%20Training">ENQUIRE ABOUT TRAINING</a>
     </div>
   </section>
 
   <footer>
-    © 2026 Linebreak Media. All rights reserved.
+    © 2026 BREAKMATCH Sports Media. All rights reserved.
   </footer>
 
 </body>
