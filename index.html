@@ -4,8 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINEBREAK MEDIA | The Stories Behind The Sport</title>
-<meta name="description" content="Professional sports journalism, digital content and freelance media services for clubs and publications.">
+<title>BREAKMATCH SPORTS MEDIA | The Stories Behind The Sport</title>
+<meta name="description" content="BREAKMATCH Sports Media provides professional sports journalism, digital content and freelance media services for clubs and publications.">
+
 <style>
 :root {
   --navy: #071a33;
@@ -23,6 +24,7 @@ body {
   line-height: 1.65;
 }
 a { text-decoration: none; color: inherit; }
+
 header {
   background: #ffffff;
   color: var(--navy);
@@ -34,8 +36,18 @@ header {
   gap: 18px;
   border-bottom: 1px solid #e5eaf0;
 }
-.logo { font-size: 27px; font-weight: 900; letter-spacing: 2px; }
-.logo span { color: var(--gold); }
+.logo {
+  display: inline-block;
+  background: var(--navy);
+  line-height: 0;
+}
+.logo img {
+  max-width: 220px;
+  max-height: 75px;
+  width: auto;
+  height: auto;
+  display: block;
+}
 nav { display: flex; flex-wrap: wrap; gap: 19px; }
 nav a {
   color: var(--navy);
@@ -43,9 +55,9 @@ nav a {
   font-weight: bold;
   letter-spacing: .7px;
   text-transform: uppercase;
-  text-decoration: none;
 }
 nav a:hover { color: var(--gold); }
+
 .hero {
   background: linear-gradient(120deg, #071a33, #173c63);
   color: white;
@@ -90,6 +102,7 @@ nav a:hover { color: var(--gold); }
   color: white;
   border: 1px solid white;
 }
+
 .section {
   padding: 75px 7%;
   text-align: center;
@@ -109,6 +122,7 @@ nav a:hover { color: var(--gold); }
   background: var(--gold);
   margin: 18px auto 25px;
 }
+
 .divisions {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -138,9 +152,8 @@ nav a:hover { color: var(--gold); }
 }
 .division p { color: #dce5ef; margin-bottom: 25px; }
 .division .button { margin: auto 0 0; }
-.founding {
-  background: var(--light);
-}
+
+.founding { background: var(--light); }
 .founding-grid {
   display: grid;
   grid-template-columns: minmax(0, 600px);
@@ -162,6 +175,7 @@ nav a:hover { color: var(--gold); }
   letter-spacing: 1px;
 }
 .offer p { margin: 15px 0; }
+
 .contact {
   background: var(--navy);
   color: white;
@@ -182,14 +196,23 @@ nav a:hover { color: var(--gold); }
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
+
 footer {
   background: #041225;
   color: white;
   text-align: center;
   padding: 30px 15px;
 }
-footer .logo { font-size: 22px; }
-footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
+footer .logo img {
+  max-width: 190px;
+  max-height: 65px;
+  margin: 0 auto;
+}
+footer p {
+  color: #aebdce;
+  font-size: 12px;
+  margin-top: 8px;
+}
 .division-image {
   width: 100%;
   height: auto;
@@ -198,13 +221,7 @@ footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
   margin-bottom: 25px;
   border-radius: 3px;
 }
-.contact-icon {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 12px;
-}
+
 @media(max-width: 800px) {
   header { justify-content: center; text-align: center; }
   nav { justify-content: center; gap: 12px; }
@@ -216,12 +233,15 @@ footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
- <a href="index.html" class="logo">
-  <img src="LM%20Linebreak%20Media%20Logo.png" alt="Linebreak Media Logo" style="max-width:220px; max-height:70px; width:auto; height:auto; display:block;">
-</a>
+  <a href="index.html" class="logo">
+    <img src="BreakMatch%20Sports%20Media%20Logo.png"
+         alt="BREAKMATCH Sports Media Logo">
+  </a>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="linebreak-club.html">Club</a>
@@ -235,99 +255,174 @@ footer p { color: #aebdce; font-size: 12px; margin-top: 8px; }
 </header>
 
 <section class="hero">
-  <img
-  src="https://static.wixstatic.com/media/984d1f_d486b3e9f8e54ba1aba2c2161362c677~mv2.png/v1/fill/w_980%2Ch_552%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_auto/984d1f_d486b3e9f8e54ba1aba2c2161362c677~mv2.png"
-  alt="Linebreak Media banner"
-  style="width:100%;max-width:850px;height:auto;display:block;margin:0 auto 30px;"
->
   <div class="eyebrow">ESTABLISHED 2026</div>
-  <h1>LINEBREAK MEDIA</h1>
-  <h2>THE STORIES BEHIND THE SPORT.</h2>
-  <p>Professional sports journalism, digital content production and freelance media services connecting clubs, publications and sporting communities.</p>
-  <a href="linebreak-club.html" class="button">Explore Linebreak Club</a>
-  <a href="linebreak-press.html" class="button outline">Explore Linebreak Press</a>
+
+  <h1>BREAKMATCH</h1>
+  <h2>SPORTS MEDIA</h2>
+
+  <p>
+    Professional sports journalism, digital content production and
+    freelance media services connecting clubs, publications and
+    sporting communities.
+  </p>
+
+  <a href="linebreak-club.html" class="button">
+    Explore BREAKMATCH Club
+  </a>
+
+  <a href="linebreak-press.html" class="button outline">
+    Explore BREAKMATCH Press
+  </a>
 </section>
 
 <section class="section">
   <h2>TWO DIVISIONS. ONE CENTRAL OPERATION.</h2>
   <div class="gold-line"></div>
-  <p class="section-intro">Two specialist divisions. One shared passion for sport and storytelling. Linebreak Media brings together professional sports journalism, creative content and an international network of freelance talent.</p>
+
+  <p class="section-intro">
+    Two specialist divisions. One shared passion for sport and
+    storytelling. BREAKMATCH Sports Media brings together professional
+    sports journalism, creative content and an international network
+    of freelance talent.
+  </p>
 
   <div class="divisions">
+
     <div class="division">
       <span class="number">01 / FOR SPORTS CLUBS</span>
+
       <img
-  src="https://static.wixstatic.com/media/984d1f_239c08408adf4b30b10d86865bbc3cee~mv2.png/v1/fill/w_526%2Ch_330%2Cal_c%2Cq_85%2Cenc_auto/Screenshot%202026-11-09%20134750_edited.png"
-  alt="Linebreak Club"
-  class="division-image"
->
-      <h3>LINEBREAK CLUB</h3>
-      <strong>YOUR CLUB ALREADY HAS A STORY. WE MAKE SURE PEOPLE HEAR IT.</strong>
-      <p>Professional sports journalism, digital content production and social media management for clubs looking to grow their profile and engage supporters.</p>
-      <a href="linebreak-club.html" class="button">Explore Linebreak Club</a>
+        src="https://static.wixstatic.com/media/984d1f_239c08408adf4b30b10d86865bbc3cee~mv2.png/v1/fill/w_526%2Ch_330%2Cal_c%2Cq_85%2Cenc_auto/Screenshot%202026-11-09%20134750_edited.png"
+        alt="BREAKMATCH Club"
+        class="division-image"
+      >
+
+      <h3>BREAKMATCH CLUB</h3>
+
+      <strong>
+        YOUR CLUB ALREADY HAS A STORY. WE MAKE SURE PEOPLE HEAR IT.
+      </strong>
+
+      <p>
+        Professional sports journalism, digital content production
+        and social media management for clubs looking to grow their
+        profile and engage supporters.
+      </p>
+
+      <a href="linebreak-club.html" class="button">
+        Explore BREAKMATCH Club
+      </a>
     </div>
+
     <div class="division press">
       <span class="number">02 / FOR PUBLICATIONS</span>
+
       <img
-  src="https://static.wixstatic.com/media/984d1f_b4d01c723eb046718fd766dbee1eb44f~mv2.jpg/v1/fill/w_980%2Ch_651%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/ai-generated-IMAGE.jpg"
-  alt="Linebreak Press"
-  class="division-image"
->
-      <h3>LINEBREAK PRESS</h3>
-      <strong>CONNECTING PUBLICATIONS WITH JOURNALISTS WHO KNOW YOUR SPORT.</strong>
-      <p>A managed network of freelance sports journalists, photographers and content creators, connecting publications with reliable coverage across multiple sports and locations.</p>
-      <a href="linebreak-press.html" class="button">Explore Linebreak Press</a>
+        src="https://static.wixstatic.com/media/984d1f_b4d01c723eb046718fd766dbee1eb44f~mv2.jpg/v1/fill/w_980%2Ch_651%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/ai-generated-IMAGE.jpg"
+        alt="BREAKMATCH Press"
+        class="division-image"
+      >
+
+      <h3>BREAKMATCH PRESS</h3>
+
+      <strong>
+        CONNECTING PUBLICATIONS WITH JOURNALISTS WHO KNOW YOUR SPORT.
+      </strong>
+
+      <p>
+        A managed network of freelance sports journalists,
+        photographers and content creators, connecting publications
+        with reliable coverage across multiple sports and locations.
+      </p>
+
+      <a href="linebreak-press.html" class="button">
+        Explore BREAKMATCH Press
+      </a>
     </div>
+
   </div>
 </section>
 
 <section class="section founding">
   <h2>BECOME A FOUNDING PARTNER</h2>
   <div class="gold-line"></div>
-  <p class="section-intro">Help us build something from the ground up. Join the first clubs to become part of the Linebreak Media network.</p>
+
+  <p class="section-intro">
+    Help us build something from the ground up. Join the first clubs
+    to become part of the BREAKMATCH Sports Media network.
+  </p>
 
   <div class="founding-grid">
     <div class="offer">
-      <strong>LINEBREAK CLUB</strong>
+      <strong>BREAKMATCH CLUB</strong>
+
       <h3>10 FOUNDING CLUB PLACES</h3>
-      <p>Receive approximately 10% off monthly packages for your first month, plus access to a special £50 first one-off booking offer.</p>
-      <a href="pricing.html" class="button">Explore Club Pricing</a>
+
+      <p>
+        Receive approximately 10% off monthly packages for your first
+        month, plus access to a special £50 first one-off booking offer.
+      </p>
+
+      <a href="pricing.html" class="button">
+        Explore Club Pricing
+      </a>
     </div>
   </div>
 </section>
 
 <section class="section contact">
-  <h2>GET IN TOUCH WITH LINEBREAK MEDIA</h2>
+  <h2>GET IN TOUCH WITH BREAKMATCH SPORTS MEDIA</h2>
   <div class="gold-line"></div>
-  <p>Stay connected with Linebreak Media for updates, new opportunities and the latest developments.</p>
+
+  <p>
+    Stay connected with BREAKMATCH Sports Media for updates,
+    new opportunities and the latest developments.
+  </p>
 
   <div class="contact-details">
+
     <div>
       <h3>EMAIL ENQUIRIES</h3>
-      <a href="mailto:tom.linebreakmedia@gmail.com">tom.linebreakmedia@gmail.com</a>
+      <a href="mailto:tommsansom@gmail.com">
+        tommsansom@gmail.com
+      </a>
     </div>
+
     <div>
       <h3>INSTAGRAM</h3>
       <p>COMING SOON</p>
     </div>
+
     <div>
       <h3>X</h3>
-      <a href="https://x.com/TomSansomSport" target="_blank">@TomSansomSport</a>
+      <a href="https://x.com/TomSansomSport" target="_blank">
+        @TomSansomSport
+      </a>
     </div>
+
     <div>
       <h3>PHONE ENQUIRIES</h3>
       <p>UK: +44 (0) 7546 450845</p>
       <p>IRELAND: +353 (0) 83 882 2024</p>
     </div>
+
   </div>
+
   <br>
-  <a href="enquiries.html" class="button">All Enquiries</a>
+
+  <a href="enquiries.html" class="button">
+    All Enquiries
+  </a>
 </section>
 
 <footer>
-  <div class="logo">LINEBREAK<span>.</span>MEDIA</div>
+  <div class="logo">
+    <img src="BreakMatch%20Sports%20Media%20Logo.png"
+         alt="BREAKMATCH Sports Media Logo">
+  </div>
+
   <p>THE STORIES BEHIND THE SPORT.</p>
-  <p>© 2026 Linebreak Media. All rights reserved.</p>
+  <p>© 2026 BREAKMATCH Sports Media. All rights reserved.</p>
 </footer>
 
 </body>
