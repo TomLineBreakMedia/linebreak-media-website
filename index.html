@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BREAKMATCH SPORTS MEDIA | The Stories Behind The Sport</title>
-<meta name="description" content="BREAKMATCH Sports Media provides professional sports journalism, digital content and freelance media services for clubs and publications.">
+<meta name="description" content="Professional sports journalism, digital content and freelance media services for clubs and publications.">
 
 <style>
 :root {
@@ -16,19 +16,34 @@
   --light: #f2f5f8;
   --text: #17283d;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   line-height: 1.65;
 }
-a { text-decoration: none; color: inherit; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER AND LOGO */
 
 header {
   background: #ffffff;
   color: var(--navy);
-  padding: 20px 6%;
+  padding: 0 6% 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,56 +51,90 @@ header {
   gap: 18px;
   border-bottom: 1px solid #e5eaf0;
 }
+
 .logo {
-  display: inline-block;
+  display: block;
+  flex-shrink: 0;
   background: var(--navy);
   line-height: 0;
+  margin: 0;
+  padding: 0;
 }
+
 .logo img {
-  max-width: 220px;
-  max-height: 75px;
-  width: auto;
-  height: auto;
   display: block;
+  height: 92px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
-nav { display: flex; flex-wrap: wrap; gap: 19px; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+}
+
 nav a {
   color: var(--navy);
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .7px;
   text-transform: uppercase;
+  text-decoration: none;
 }
-nav a:hover { color: var(--gold); }
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
 
 .hero {
   background: linear-gradient(120deg, #071a33, #173c63);
   color: white;
   text-align: center;
-  padding: 110px 20px 120px;
+  padding: 60px 20px 120px;
 }
+
+.hero-image {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+}
+
 .eyebrow {
   color: var(--gold);
   letter-spacing: 4px;
   font-size: 13px;
   font-weight: bold;
 }
+
 .hero h1 {
   font-size: clamp(38px, 7vw, 76px);
   letter-spacing: 3px;
   line-height: 1.1;
   margin: 20px 0;
 }
+
 .hero h2 {
   font-size: clamp(18px, 3vw, 27px);
   letter-spacing: 3px;
   font-weight: 400;
 }
+
 .hero p {
   max-width: 650px;
   margin: 30px auto;
   color: #dce5ef;
 }
+
+/* BUTTONS */
+
 .button {
   display: inline-block;
   padding: 13px 25px;
@@ -97,31 +146,39 @@ nav a:hover { color: var(--gold); }
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .button.outline {
   background: transparent;
   color: white;
   border: 1px solid white;
 }
 
+/* GENERAL SECTIONS */
+
 .section {
   padding: 75px 7%;
   text-align: center;
 }
+
 .section h2 {
   color: var(--navy);
   font-size: 32px;
   margin-bottom: 12px;
 }
+
 .section-intro {
   max-width: 750px;
   margin: 0 auto 35px;
 }
+
 .gold-line {
   width: 55px;
   height: 3px;
   background: var(--gold);
   margin: 18px auto 25px;
 }
+
+/* DIVISIONS */
 
 .divisions {
   display: grid;
@@ -130,6 +187,7 @@ nav a:hover { color: var(--gold); }
   margin-top: 40px;
   text-align: left;
 }
+
 .division {
   background: var(--navy);
   color: white;
@@ -139,80 +197,32 @@ nav a:hover { color: var(--gold); }
   flex-direction: column;
   align-items: flex-start;
 }
-.division.press { background: var(--blue); }
+
+.division.press {
+  background: var(--blue);
+}
+
 .division .number {
   color: var(--gold);
   font-size: 13px;
   letter-spacing: 2px;
 }
+
 .division h3 {
   font-size: 29px;
   margin: 15px 0;
   letter-spacing: 1px;
 }
-.division p { color: #dce5ef; margin-bottom: 25px; }
-.division .button { margin: auto 0 0; }
 
-.founding { background: var(--light); }
-.founding-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 600px);
-  justify-content: center;
-  gap: 25px;
-  max-width: 950px;
-  margin: 35px auto 0;
-}
-.offer {
-  background: white;
-  padding: 35px 25px;
-  border-top: 4px solid var(--gold);
-}
-.offer h3 { color: var(--navy); margin: 12px 0; }
-.offer strong {
-  display: block;
-  color: var(--blue);
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-.offer p { margin: 15px 0; }
-
-.contact {
-  background: var(--navy);
-  color: white;
-}
-.contact h2 { color: white; }
-.contact p { color: #dce5ef; }
-.contact a { color: var(--gold); }
-.contact-details {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-top: 35px;
-}
-.contact-details h3 {
-  font-size: 13px;
-  color: var(--gold);
-  letter-spacing: 1px;
-  margin-bottom: 12px;
+.division p {
+  color: #dce5ef;
+  margin-bottom: 25px;
 }
 
-footer {
-  background: #041225;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
+.division .button {
+  margin: auto 0 0;
 }
-footer .logo img {
-  max-width: 190px;
-  max-height: 65px;
-  margin: 0 auto;
-}
-footer p {
-  color: #aebdce;
-  font-size: 12px;
-  margin-top: 8px;
-}
+
 .division-image {
   width: 100%;
   height: auto;
@@ -222,14 +232,142 @@ footer p {
   border-radius: 3px;
 }
 
+/* FOUNDING PARTNER */
+
+.founding {
+  background: var(--light);
+}
+
+.founding-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 600px);
+  justify-content: center;
+  gap: 25px;
+  max-width: 950px;
+  margin: 35px auto 0;
+}
+
+.offer {
+  background: white;
+  padding: 35px 25px;
+  border-top: 4px solid var(--gold);
+}
+
+.offer h3 {
+  color: var(--navy);
+  margin: 12px 0;
+}
+
+.offer strong {
+  display: block;
+  color: var(--blue);
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.offer p {
+  margin: 15px 0;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--navy);
+  color: white;
+}
+
+.contact h2 {
+  color: white;
+}
+
+.contact p {
+  color: #dce5ef;
+}
+
+.contact a {
+  color: var(--gold);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 35px;
+}
+
+.contact-details h3 {
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #041225;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer .footer-logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+footer .footer-logo span {
+  color: var(--gold);
+}
+
+footer p {
+  color: #aebdce;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* MOBILE */
+
 @media(max-width: 800px) {
-  header { justify-content: center; text-align: center; }
-  nav { justify-content: center; gap: 12px; }
-  nav a { font-size: 10px; }
-  .divisions, .founding-grid { grid-template-columns: 1fr; }
-  .hero { padding: 75px 20px; }
-  .section { padding: 55px 6%; }
-  .contact-details { gap: 30px; }
+  header {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .logo img {
+    height: 82px;
+    max-width: 290px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .divisions,
+  .founding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 55px 20px 75px;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+
+  .contact-details {
+    gap: 30px;
+  }
 }
 </style>
 </head>
@@ -238,8 +376,10 @@ footer p {
 
 <header>
   <a href="index.html" class="logo">
-    <img src="BreakMatch%20Sports%20Media%20Logo.png"
-         alt="BREAKMATCH Sports Media Logo">
+    <img
+      src="BreakMatch%20Sports%20Media%20Logo.png"
+      alt="BREAKMATCH Sports Media Logo"
+    >
   </a>
 
   <nav>
@@ -255,40 +395,46 @@ footer p {
 </header>
 
 <section class="hero">
+
+  <img
+    class="hero-image"
+    src="https://static.wixstatic.com/media/984d1f_d486b3e9f8e54ba1aba2c2161362c677~mv2.png/v1/fill/w_980%2Ch_552%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01%2Cenc_auto/984d1f_d486b3e9f8e54ba1aba2c2161362c677~mv2.png"
+    alt="Grassroots rugby"
+  >
+
   <div class="eyebrow">ESTABLISHED 2026</div>
 
-  <h1>BREAKMATCH</h1>
-  <h2>SPORTS MEDIA</h2>
+  <h1>BREAKMATCH SPORTS MEDIA</h1>
+
+  <h2>THE STORIES BEHIND THE SPORT.</h2>
 
   <p>
-    Professional sports journalism, digital content production and
-    freelance media services connecting clubs, publications and
-    sporting communities.
+    Professional sports journalism, digital content production and freelance
+    media services connecting clubs, publications and sporting communities.
   </p>
 
-  <a href="linebreak-club.html" class="button">
-    Explore BREAKMATCH Club
-  </a>
+  <a href="linebreak-club.html" class="button">Explore BREAKMATCH Club</a>
 
-  <a href="linebreak-press.html" class="button outline">
-    Explore BREAKMATCH Press
-  </a>
+  <a href="linebreak-press.html" class="button outline">Explore BREAKMATCH Press</a>
+
 </section>
 
 <section class="section">
+
   <h2>TWO DIVISIONS. ONE CENTRAL OPERATION.</h2>
+
   <div class="gold-line"></div>
 
   <p class="section-intro">
-    Two specialist divisions. One shared passion for sport and
-    storytelling. BREAKMATCH Sports Media brings together professional
-    sports journalism, creative content and an international network
-    of freelance talent.
+    Two specialist divisions. One shared passion for sport and storytelling.
+    BREAKMATCH Sports Media brings together professional sports journalism,
+    creative content and an international network of freelance talent.
   </p>
 
   <div class="divisions">
 
     <div class="division">
+
       <span class="number">01 / FOR SPORTS CLUBS</span>
 
       <img
@@ -299,22 +445,19 @@ footer p {
 
       <h3>BREAKMATCH CLUB</h3>
 
-      <strong>
-        YOUR CLUB ALREADY HAS A STORY. WE MAKE SURE PEOPLE HEAR IT.
-      </strong>
+      <strong>YOUR CLUB ALREADY HAS A STORY. WE MAKE SURE PEOPLE HEAR IT.</strong>
 
       <p>
-        Professional sports journalism, digital content production
-        and social media management for clubs looking to grow their
-        profile and engage supporters.
+        Professional sports journalism, digital content production and social
+        media management for clubs looking to grow their profile and engage supporters.
       </p>
 
-      <a href="linebreak-club.html" class="button">
-        Explore BREAKMATCH Club
-      </a>
+      <a href="linebreak-club.html" class="button">Explore BREAKMATCH Club</a>
+
     </div>
 
     <div class="division press">
+
       <span class="number">02 / FOR PUBLICATIONS</span>
 
       <img
@@ -325,67 +468,68 @@ footer p {
 
       <h3>BREAKMATCH PRESS</h3>
 
-      <strong>
-        CONNECTING PUBLICATIONS WITH JOURNALISTS WHO KNOW YOUR SPORT.
-      </strong>
+      <strong>CONNECTING PUBLICATIONS WITH JOURNALISTS WHO KNOW YOUR SPORT.</strong>
 
       <p>
-        A managed network of freelance sports journalists,
-        photographers and content creators, connecting publications
-        with reliable coverage across multiple sports and locations.
+        A managed network of freelance sports journalists, photographers and
+        content creators, connecting publications with reliable coverage
+        across multiple sports and locations.
       </p>
 
-      <a href="linebreak-press.html" class="button">
-        Explore BREAKMATCH Press
-      </a>
+      <a href="linebreak-press.html" class="button">Explore BREAKMATCH Press</a>
+
     </div>
 
   </div>
 </section>
 
 <section class="section founding">
+
   <h2>BECOME A FOUNDING PARTNER</h2>
+
   <div class="gold-line"></div>
 
   <p class="section-intro">
-    Help us build something from the ground up. Join the first clubs
-    to become part of the BREAKMATCH Sports Media network.
+    Help us build something from the ground up. Join the first clubs to become
+    part of the BREAKMATCH Sports Media network.
   </p>
 
   <div class="founding-grid">
+
     <div class="offer">
+
       <strong>BREAKMATCH CLUB</strong>
 
       <h3>10 FOUNDING CLUB PLACES</h3>
 
       <p>
-        Receive approximately 10% off monthly packages for your first
-        month, plus access to a special £50 first one-off booking offer.
+        Receive approximately 10% off monthly packages for your first month,
+        plus access to a special £50 first one-off booking offer.
       </p>
 
-      <a href="pricing.html" class="button">
-        Explore Club Pricing
-      </a>
+      <a href="pricing.html" class="button">Explore Club Pricing</a>
+
     </div>
+
   </div>
 </section>
 
 <section class="section contact">
+
   <h2>GET IN TOUCH WITH BREAKMATCH SPORTS MEDIA</h2>
+
   <div class="gold-line"></div>
 
   <p>
-    Stay connected with BREAKMATCH Sports Media for updates,
-    new opportunities and the latest developments.
+    Stay connected with BREAKMATCH Sports Media for updates, new opportunities
+    and the latest developments.
   </p>
 
   <div class="contact-details">
 
     <div>
       <h3>EMAIL ENQUIRIES</h3>
-      <a href="mailto:tommsansom@gmail.com">
-        tommsansom@gmail.com
-      </a>
+      <a href="mailto:tommsansom@gmail.com">tommsansom@gmail.com</a>
     </div>
 
     <div>
@@ -395,9 +539,7 @@ footer p {
 
     <div>
       <h3>X</h3>
-      <a href="https://x.com/TomSansomSport" target="_blank">
-        @TomSansomSport
-      </a>
+      <a href="https://x.com/TomSansomSport" target="_blank">@TomSansomSport</a>
     </div>
 
     <div>
@@ -410,19 +552,18 @@ footer p {
 
   <br>
 
-  <a href="enquiries.html" class="button">
-    All Enquiries
-  </a>
+  <a href="enquiries.html" class="button">All Enquiries</a>
+
 </section>
 
 <footer>
-  <div class="logo">
-    <img src="BreakMatch%20Sports%20Media%20Logo.png"
-         alt="BREAKMATCH Sports Media Logo">
-  </div>
+
+  <div class="footer-logo">BREAKMATCH<span>.</span>SPORTS MEDIA</div>
 
   <p>THE STORIES BEHIND THE SPORT.</p>
+
   <p>© 2026 BREAKMATCH Sports Media. All rights reserved.</p>
+
 </footer>
 
 </body>
