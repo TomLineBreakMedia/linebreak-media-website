@@ -505,13 +505,33 @@ footer a:hover {color:var(--gold)}
       <option value="GBP">🇬🇧 GBP – British Pound</option>
       <option value="EUR">🇪🇺 EUR – Euro</option>
       <option value="USD">🇺🇸 USD – US Dollar</option>
+      <option value="ZAR">🇿🇦 ZAR – South African Rand</option>
       <option value="AUD">🇦🇺 AUD – Australian Dollar</option>
-      <option value="CAD">🇨🇦 CAD – Canadian Dollar</option>
-      <option value="CHF">🇨🇭 CHF – Swiss Franc</option>
-      <option value="JPY">🇯🇵 JPY – Japanese Yen</option>
-      <option value="CNY">🇨🇳 CNY – Chinese Yuan</option>
-      <option value="INR">🇮🇳 INR – Indian Rupee</option>
       <option value="NZD">🇳🇿 NZD – New Zealand Dollar</option>
+      <option value="CAD">🇨🇦 CAD – Canadian Dollar</option>
+      <option value="BRL">🇧🇷 BRL – Brazilian Real</option>
+      <option value="MXN">🇲🇽 MXN – Mexican Peso</option>
+      <option value="CHF">🇨🇭 CHF – Swiss Franc</option>
+      <option value="DKK">🇩🇰 DKK – Danish Krone</option>
+      <option value="NOK">🇳🇴 NOK – Norwegian Krone</option>
+      <option value="SEK">🇸🇪 SEK – Swedish Krona</option>
+      <option value="PLN">🇵🇱 PLN – Polish Złoty</option>
+      <option value="CZK">🇨🇿 CZK – Czech Koruna</option>
+      <option value="HUF">🇭🇺 HUF – Hungarian Forint</option>
+      <option value="RON">🇷🇴 RON – Romanian Leu</option>
+      <option value="ISK">🇮🇸 ISK – Icelandic Króna</option>
+      <option value="TRY">🇹🇷 TRY – Turkish Lira</option>
+      <option value="CNY">🇨🇳 CNY – Chinese Yuan</option>
+      <option value="JPY">🇯🇵 JPY – Japanese Yen</option>
+      <option value="INR">🇮🇳 INR – Indian Rupee</option>
+      <option value="KRW">🇰🇷 KRW – South Korean Won</option>
+      <option value="HKD">🇭🇰 HKD – Hong Kong Dollar</option>
+      <option value="SGD">🇸🇬 SGD – Singapore Dollar</option>
+      <option value="MYR">🇲🇾 MYR – Malaysian Ringgit</option>
+      <option value="IDR">🇮🇩 IDR – Indonesian Rupiah</option>
+      <option value="THB">🇹🇭 THB – Thai Baht</option>
+      <option value="PHP">🇵🇭 PHP – Philippine Peso</option>
+      <option value="ILS">🇮🇱 ILS – Israeli New Shekel</option>
     </select>
     <span class="currency-status" id="currency-status">Prices shown in GBP.</span>
     <p class="currency-note">
@@ -915,7 +935,9 @@ const currencySelect = document.getElementById("currency-select");
 const currencyStatus = document.getElementById("currency-status");
 
 const supportedCurrencies = [
-  "GBP","EUR","USD","AUD","CAD","CHF","JPY","CNY","INR","NZD"
+  "GBP","EUR","USD","ZAR","AUD","NZD","CAD","BRL","MXN","CHF",
+  "DKK","NOK","SEK","PLN","CZK","HUF","RON","ISK","TRY","CNY",
+  "JPY","INR","KRW","HKD","SGD","MYR","IDR","THB","PHP","ILS"
 ];
 
 let exchangeRates = { GBP: 1 };
@@ -925,8 +947,7 @@ function formatMoney(amount, currency) {
   try {
     return new Intl.NumberFormat("en", {
       style:"currency",
-      currency:currency,
-      maximumFractionDigits:currency === "JPY" ? 0 : 2
+      currency:currency
     }).format(amount);
   } catch(error) {
     return currency + " " + amount.toFixed(2);
@@ -962,7 +983,7 @@ async function loadExchangeRates() {
 
   try {
     const response = await fetch(
-      "https://api.frankfurter.dev/v1/latest?base=GBP&symbols=EUR,USD,AUD,CAD,CHF,JPY,CNY,INR,NZD",
+      "https://api.frankfurter.dev/v1/latest?base=GBP&symbols=EUR,USD,ZAR,AUD,NZD,CAD,BRL,MXN,CHF,DKK,NOK,SEK,PLN,CZK,HUF,RON,ISK,TRY,CNY,JPY,INR,KRW,HKD,SGD,MYR,IDR,THB,PHP,ILS",
       {cache:"no-store"}
     );
 
