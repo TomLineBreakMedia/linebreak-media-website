@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LINEBREAK CLUB | Linebreak Media</title>
+<title>BREAKMATCH CLUB | BREAKMATCH Sports Media</title>
 <meta name="description" content="Professional sports journalism, website content and social media management for sports clubs.">
 
 <style>
@@ -16,19 +16,25 @@
   --light: #f2f5f8;
   --text: #17283d;
 }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 html { scroll-behavior: smooth; }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   line-height: 1.65;
 }
+
 a { text-decoration: none; color: inherit; }
+
+/* HEADER AND LOGO */
 
 header {
   background: white;
   color: var(--navy);
-  padding: 20px 6%;
+  padding: 0 6% 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +42,28 @@ header {
   gap: 18px;
   border-bottom: 1px solid #e5eaf0;
 }
+
+.logo {
+  display: block;
+  flex-shrink: 0;
+  background: var(--navy);
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  display: block;
+  height: 92px;
+  width: auto;
+  max-width: 320px;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
 nav { display: flex; flex-wrap: wrap; gap: 19px; }
+
 nav a {
   color: var(--navy);
   font-size: 12px;
@@ -44,7 +71,10 @@ nav a {
   letter-spacing: .7px;
   text-transform: uppercase;
 }
+
 nav a:hover { color: var(--gold); }
+
+/* HERO */
 
 .hero {
   background: linear-gradient(120deg, #071a33, #173c63);
@@ -52,28 +82,34 @@ nav a:hover { color: var(--gold); }
   text-align: center;
   padding: 85px 20px 95px;
 }
+
 .eyebrow {
   color: var(--gold);
   letter-spacing: 4px;
   font-size: 13px;
   font-weight: bold;
 }
+
 .hero h1 {
   font-size: clamp(38px, 7vw, 72px);
   letter-spacing: 3px;
   line-height: 1.1;
   margin: 20px 0;
 }
+
 .hero h2 {
   font-size: clamp(18px, 3vw, 26px);
   letter-spacing: 2px;
   font-weight: 400;
 }
+
 .hero p {
   max-width: 720px;
   margin: 25px auto;
   color: #dce5ef;
 }
+
+/* BUTTONS */
 
 .button {
   display: inline-block;
@@ -86,31 +122,38 @@ nav a:hover { color: var(--gold); }
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .button.outline {
   background: transparent;
   color: white;
   border: 1px solid white;
 }
 
+/* SECTIONS */
+
 .section {
   padding: 75px 7%;
   text-align: center;
 }
+
 .section h2 {
   color: var(--navy);
   font-size: 32px;
   margin-bottom: 12px;
 }
+
 .section-intro {
   max-width: 780px;
   margin: 0 auto 35px;
 }
+
 .gold-line {
   width: 55px;
   height: 3px;
   background: var(--gold);
   margin: 18px auto 25px;
 }
+
 .light-section { background: var(--light); }
 
 .feature-image {
@@ -122,6 +165,7 @@ nav a:hover { color: var(--gold); }
 }
 
 /* CLUB TYPES */
+
 .club-types {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -130,18 +174,22 @@ nav a:hover { color: var(--gold); }
   margin: 40px auto 0;
   text-align: left;
 }
+
 .club-type {
   background: white;
   padding: 30px;
   border-top: 4px solid var(--gold);
 }
+
 .club-type h3 {
   color: var(--navy);
   font-size: 19px;
   margin-bottom: 12px;
   letter-spacing: .4px;
 }
+
 .club-type p { color: var(--text); }
+
 .club-type .social-image {
   width: 100%;
   height: 220px;
@@ -151,6 +199,7 @@ nav a:hover { color: var(--gold); }
 }
 
 /* SERVICES */
+
 .services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -158,41 +207,49 @@ nav a:hover { color: var(--gold); }
   margin-top: 40px;
   text-align: left;
 }
+
 .service-card {
   background: var(--navy);
   color: white;
   padding: 38px 32px;
   border-top: 4px solid var(--gold);
 }
+
 .service-card.social { background: var(--blue); }
+
 .service-card .number {
   color: var(--gold);
   font-size: 13px;
   letter-spacing: 2px;
 }
+
 .service-card h3 {
   font-size: 25px;
   margin: 15px 0;
 }
+
 .service-card p {
   color: #dce5ef;
   margin-bottom: 18px;
 }
+
 .service-card ul {
   padding-left: 20px;
   color: #dce5ef;
   margin-bottom: 25px;
 }
+
 .service-card li { margin-bottom: 9px; }
 
 /* SOCIAL MEDIA */
+
 .social-intro {
   max-width: 850px;
   margin: 0 auto 40px;
 }
-.social-intro p {
-  margin-bottom: 18px;
-}
+
+.social-intro p { margin-bottom: 18px; }
+
 .social-services {
   display: grid;
   grid-template-columns: 1fr;
@@ -201,6 +258,7 @@ nav a:hover { color: var(--gold); }
   margin: 45px auto 0;
   text-align: left;
 }
+
 .social-service {
   display: grid;
   grid-template-columns: 42% 1fr;
@@ -210,18 +268,22 @@ nav a:hover { color: var(--gold); }
   padding: 25px;
   border-left: 4px solid var(--gold);
 }
+
 .social-service:nth-child(even) {
   grid-template-columns: 1fr 42%;
 }
+
 .social-service:nth-child(even) .social-image {
   order: 2;
 }
+
 .social-image {
   width: 100%;
   height: 250px;
   object-fit: cover;
   display: block;
 }
+
 .team-lineup-image {
   width: 100%;
   height: auto;
@@ -229,30 +291,35 @@ nav a:hover { color: var(--gold); }
   object-position: top;
   display: block;
 }
+
 .social-copy .number {
   color: var(--blue);
   font-size: 13px;
   font-weight: bold;
   letter-spacing: 1.5px;
 }
+
 .social-copy h3 {
   color: var(--navy);
   font-size: 24px;
   margin: 8px 0 4px;
 }
+
 .social-copy h4 {
   color: var(--blue);
   font-size: 15px;
   margin-bottom: 12px;
   letter-spacing: .5px;
 }
+
 .social-copy p { margin-bottom: 15px; }
-.social-copy ul {
-  padding-left: 20px;
-}
+
+.social-copy ul { padding-left: 20px; }
+
 .social-copy li { margin-bottom: 6px; }
 
 /* BENEFITS */
+
 .benefits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -261,28 +328,33 @@ nav a:hover { color: var(--gold); }
   margin: 40px auto 0;
   text-align: left;
 }
+
 .benefit {
   background: white;
   padding: 28px 24px;
   border-bottom: 3px solid var(--gold);
 }
+
 .benefit h3 {
   color: var(--navy);
   margin-bottom: 10px;
 }
 
 /* PROCESS */
+
 .process {
   max-width: 850px;
   margin: 35px auto 0;
   text-align: left;
 }
+
 .process-step {
   padding: 22px 25px;
   margin-bottom: 15px;
   background: var(--light);
   border-left: 4px solid var(--gold);
 }
+
 .process-step strong {
   display: block;
   color: var(--navy);
@@ -290,16 +362,21 @@ nav a:hover { color: var(--gold); }
 }
 
 /* CALL TO ACTION */
+
 .cta {
   background: var(--navy);
   color: white;
 }
+
 .cta h2 { color: white; }
+
 .cta p {
   color: #dce5ef;
   max-width: 700px;
   margin: 0 auto 25px;
 }
+
+/* FOOTER */
 
 footer {
   background: #041225;
@@ -307,27 +384,55 @@ footer {
   text-align: center;
   padding: 30px 15px;
 }
+
 footer p {
   color: #aebdce;
   font-size: 12px;
   margin-top: 8px;
 }
 
+/* MOBILE */
+
 @media(max-width: 800px) {
-  header { justify-content: center; text-align: center; }
-  nav { justify-content: center; gap: 12px; }
+  header {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .logo img {
+    height: 82px;
+    max-width: 290px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
   nav a { font-size: 10px; }
-  .services, .club-types, .benefits { grid-template-columns: 1fr; }
+
+  .services,
+  .club-types,
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
   .social-service,
   .social-service:nth-child(even) {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .social-service:nth-child(even) .social-image {
     order: 0;
   }
+
   .social-image { height: auto; }
+
   .hero { padding: 65px 20px; }
+
   .section { padding: 55px 6%; }
 }
 </style>
@@ -336,11 +441,13 @@ footer p {
 <body>
 
 <header>
-  <a href="index.html">
-    <img src="LM%20Linebreak%20Media%20Logo.png"
-    alt="Linebreak Media Logo"
-    style="max-width:220px;max-height:70px;width:auto;height:auto;display:block;">
+  <a href="index.html" class="logo">
+    <img
+      src="BreakMatch%20Sports%20Media%20Logo.png"
+      alt="BREAKMATCH Sports Media Logo"
+    >
   </a>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="linebreak-club.html">Club</a>
@@ -354,35 +461,58 @@ footer p {
 </header>
 
 <section class="hero">
-  <div class="eyebrow">LINEBREAK MEDIA / DIVISION 01</div>
-  <h1>LINEBREAK CLUB</h1>
+  <div class="eyebrow">BREAKMATCH SPORTS MEDIA / DIVISION 01</div>
+
+  <h1>BREAKMATCH CLUB</h1>
+
   <h2>YOUR CLUB ALREADY HAS A STORY.<br>WE MAKE SURE PEOPLE HEAR IT.</h2>
-  <p>Professional sports journalism, digital content production and social media management for clubs looking to grow their profile, connect with supporters and tell their story.</p>
+
+  <p>
+    Professional sports journalism, digital content production and social
+    media management for clubs looking to grow their profile, connect with
+    supporters and tell their story.
+  </p>
+
   <a href="pricing.html" class="button">Explore Club Pricing</a>
   <a href="enquiries.html" class="button outline">Make An Enquiry</a>
 </section>
 
 <section class="section">
+
   <img
     src="https://static.wixstatic.com/media/984d1f_239c08408adf4b30b10d86865bbc3cee~mv2.png/v1/fill/w_526%2Ch_330%2Cal_c%2Cq_85%2Cenc_auto/Screenshot%202026-11-09%20134750_edited.png"
-    alt="Linebreak Club"
+    alt="BREAKMATCH Club"
     class="feature-image"
   >
+
   <h2>GIVING EVERY CLUB A BIGGER VOICE</h2>
+
   <div class="gold-line"></div>
+
   <p class="section-intro">
-    Every sports club has stories worth telling. From match reports and player interviews to behind-the-scenes features and supporter-focused social media, Linebreak Club helps make your club's coverage more consistent, professional and engaging.
+    Every sports club has stories worth telling. From match reports and player
+    interviews to behind-the-scenes features and supporter-focused social media,
+    BREAKMATCH Club helps make your club's coverage more consistent,
+    professional and engaging.
   </p>
+
 </section>
 
 <section class="section light-section">
+
   <h2>WE GROW THE GRASS ROOTS.</h2>
+
   <div class="gold-line"></div>
+
   <p class="section-intro">
-    Great sports stories aren't exclusive to the professional game. We work with clubs and organisations at every level, helping them showcase their people, celebrate their achievements and build stronger connections with their communities.
+    Great sports stories aren't exclusive to the professional game. We work
+    with clubs and organisations at every level, helping them showcase their
+    people, celebrate their achievements and build stronger connections with
+    their communities.
   </p>
 
   <div class="club-types">
+
     <div class="club-type">
       <img src="scrum.avif" alt="Grassroots rugby scrum" class="social-image">
       <h3>AMATEUR AND SEMI-PROFESSIONAL CLUBS</h3>
@@ -406,17 +536,24 @@ footer p {
       <h3>SOCIAL SPORT AND FITNESS CLUBS</h3>
       <p>Helping recreational groups and fitness communities promote activities, celebrate members, attract new participants and build their identity.</p>
     </div>
+
   </div>
 </section>
 
 <section class="section">
+
   <h2>TWO SERVICES. ONE CLUB PARTNER.</h2>
+
   <div class="gold-line"></div>
+
   <p class="section-intro">
-    Choose the service that best suits your club. Website content and social media management are available separately, allowing you to invest in the areas where you need support.
+    Choose the service that best suits your club. Website content and social
+    media management are available separately, allowing you to invest in the
+    areas where you need support.
   </p>
 
   <div class="services">
+
     <div class="service-card">
       <span class="number">01 / WEBSITE CONTENT</span>
       <h3>YOUR CLUB. YOUR STORIES.</h3>
@@ -444,15 +581,18 @@ footer p {
       </ul>
       <a href="pricing.html" class="button">Social Media Packages</a>
     </div>
+
   </div>
 </section>
 
 <section class="section light-section">
+
   <h2>WHAT WE CAN OFFER YOUR CLUB</h2>
+
   <div class="gold-line"></div>
 
   <div class="social-intro">
-    <p><strong>Your social media is often the first place supporters, sponsors and potential new members discover your club.</strong> Linebreak Club can help you create a consistent, engaging online presence through professionally produced graphics, short-form video content and curated social media posts.</p>
+    <p><strong>Your social media is often the first place supporters, sponsors and potential new members discover your club.</strong> BREAKMATCH Club can help you create a consistent, engaging online presence through professionally produced graphics, short-form video content and curated social media posts.</p>
 
     <p>Whether you need occasional matchday content or someone to manage your social media throughout the week, we can tailor our services to suit your club, your audience and your budget.</p>
   </div>
@@ -460,11 +600,13 @@ footer p {
   <div class="social-services">
 
     <div class="social-service">
+
       <img
         src="https://static.wixstatic.com/media/984d1f_857c24898b4e4a5fbfb7f4634b5abfe1~mv2.webp/v1/fill/w_460,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
         alt="Sports videographer filming a match"
         class="social-image"
       >
+
       <div class="social-copy">
         <span class="number">01 / SHORT-FORM VIDEO CONTENT</span>
         <h3>BRING YOUR CLUB TO LIFE.</h3>
@@ -480,14 +622,17 @@ footer p {
           <li>Community and recruitment videos</li>
         </ul>
       </div>
+
     </div>
 
     <div class="social-service">
+
       <img
         src="Club Line-up Linebreak.png"
-        alt="Linebreak RFC fictional rugby team lineup announcement graphic"
+        alt="BREAKMATCH RFC fictional rugby team lineup announcement graphic"
         class="social-image team-lineup-image"
       >
+
       <div class="social-copy">
         <span class="number">02 / GRAPHICS AND VISUAL CONTENT</span>
         <h3>MAKE YOUR CLUB STAND OUT.</h3>
@@ -504,14 +649,17 @@ footer p {
           <li>Club news and event announcements</li>
         </ul>
       </div>
+
     </div>
 
     <div class="social-service">
+
       <img
         src="https://static.wixstatic.com/media/984d1f_d80e6f45d3de4f6789413a3d642d3766~mv2.webp/v1/fill/w_460,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ai-generated-IMAGE.webp"
         alt="Sports supporters following a match on their phones"
         class="social-image"
       >
+
       <div class="social-copy">
         <span class="number">03 / SOCIAL MEDIA POSTS AND MANAGEMENT</span>
         <h3>KEEP YOUR SUPPORTERS CONNECTED.</h3>
@@ -528,75 +676,101 @@ footer p {
           <li>Basic updates on content performance</li>
         </ul>
       </div>
+
     </div>
 
   </div>
 </section>
 
 <section class="section">
-  <h2>WHY LINEBREAK CLUB?</h2>
+
+  <h2>WHY BREAKMATCH CLUB?</h2>
+
   <div class="gold-line"></div>
+
   <p class="section-intro">
-    Your volunteers, coaches and committee members already have plenty to do. We provide dedicated media support, helping your club communicate professionally without placing the entire workload on people already giving up their time.
+    Your volunteers, coaches and committee members already have plenty to do.
+    We provide dedicated media support, helping your club communicate
+    professionally without placing the entire workload on people already
+    giving up their time.
   </p>
 
   <div class="benefits">
+
     <div class="benefit">
       <h3>SPORTS JOURNALISM EXPERIENCE</h3>
       <p>Professional editorial standards, accurate reporting and engaging storytelling across a range of sports.</p>
     </div>
+
     <div class="benefit">
       <h3>BUILT AROUND YOUR CLUB</h3>
       <p>Content shaped around your teams, competitions, supporters and the identity of your organisation.</p>
     </div>
+
     <div class="benefit">
       <h3>CONSISTENT COVERAGE</h3>
       <p>Reliable content delivered to an agreed schedule, helping your club maintain an active online presence.</p>
     </div>
+
   </div>
 </section>
 
 <section class="section light-section">
+
   <h2>HOW IT WORKS</h2>
+
   <div class="gold-line"></div>
+
   <p class="section-intro">
-    Getting started is straightforward. We'll discuss your club's needs and help identify the right level of support.
+    Getting started is straightforward. We'll discuss your club's needs and
+    help identify the right level of support.
   </p>
 
   <div class="process">
+
     <div class="process-step">
       <strong>01. TELL US ABOUT YOUR CLUB</strong>
       We'll learn about your organisation, your sport and what you want to achieve.
     </div>
+
     <div class="process-step">
       <strong>02. CHOOSE YOUR SERVICE</strong>
       Select website content, social media management or both, depending on your requirements.
     </div>
+
     <div class="process-step">
       <strong>03. AGREE YOUR CONTENT PLAN</strong>
       We'll establish the content, schedule and practical arrangements for working together.
     </div>
+
     <div class="process-step">
       <strong>04. LET US TELL YOUR STORY</strong>
-      Linebreak Club gets to work producing content that puts your club and its people in the spotlight.
+      BREAKMATCH Club gets to work producing content that puts your club and its people in the spotlight.
     </div>
+
   </div>
 </section>
 
 <section class="section cta">
+
   <h2>READY TO GIVE YOUR CLUB A BIGGER VOICE?</h2>
+
   <div class="gold-line"></div>
+
   <p>
-    Explore our packages or get in touch to discuss how Linebreak Club can support your organisation.
+    Explore our packages or get in touch to discuss how BREAKMATCH Club can
+    support your organisation.
   </p>
+
   <a href="pricing.html" class="button">View Club Pricing</a>
-  <a href="enquiries.html" class="button outline">Contact Linebreak Media</a>
+  <a href="enquiries.html" class="button outline">Contact BREAKMATCH Sports Media</a>
+
 </section>
 
 <footer>
-  <p><strong>LINEBREAK MEDIA</strong></p>
+  <p><strong>BREAKMATCH SPORTS MEDIA</strong></p>
   <p>THE STORIES BEHIND THE SPORT.</p>
-  <p>© 2026 Linebreak Media. All rights reserved.</p>
+  <p>© 2026 BREAKMATCH Sports Media. All rights reserved.</p>
 </footer>
 
 </body>
