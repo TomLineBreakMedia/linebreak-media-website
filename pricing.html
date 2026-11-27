@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -356,6 +355,28 @@ nav a:hover,nav a.active {color:var(--gold)}
   color:var(--muted);
 }
 
+/* TRAVEL ARRANGEMENTS */
+.travel-panel {
+  max-width:1050px;
+  margin:35px auto 0;
+  padding:20px 24px;
+  background:var(--light);
+  border-left:4px solid var(--gold);
+  border-radius:4px;
+}
+.travel-panel h3 {
+  color:var(--navy);
+  font-size:17px;
+  margin-bottom:7px;
+}
+.travel-panel p {
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:7px;
+}
+.travel-panel p:last-child {margin-bottom:0}
+.travel-panel strong {color:var(--navy)}
+
 /* CONTACT AND FOOTER */
 .contact-strip {
   background:var(--blue);
@@ -460,6 +481,7 @@ footer a:hover {color:var(--gold)}
   .contact-strip h2 {font-size:23px}
   .currency-box {flex-direction:column}
   .currency-box select {width:100%;max-width:300px}
+  .travel-panel {padding:17px 18px}
 }
 </style>
 </head>
@@ -482,13 +504,8 @@ footer a:hover {color:var(--gold)}
   </nav>
 </header>
 
-<!-- NEW BREAKMATCH PRICING HEADING -->
 <section class="intro">
-  <img
-    class="intro-logo"
-    src="BreakMatch%20Sports%20Media%20Logo.png"
-    alt="BREAKMATCH Sports Media"
-  >
+  <img class="intro-logo" src="BreakMatch%20Sports%20Media%20Logo.png" alt="BREAKMATCH Sports Media">
   <h1>PRICING &amp; SERVICES</h1>
   <p>
     Professional sports journalism, creative content and practical training.
@@ -497,7 +514,6 @@ footer a:hover {color:var(--gold)}
   </p>
 </section>
 
-<!-- CURRENCY CONVERTER -->
 <section class="currency-area">
   <div class="currency-box">
     <label for="currency-select">VIEW PRICES IN YOUR CURRENCY</label>
@@ -551,7 +567,6 @@ footer a:hover {color:var(--gold)}
   </div>
 </section>
 
-<!-- SOCIAL MEDIA -->
 <section class="pricing-section" id="social-media">
   <div class="section-heading">
     <span class="eyebrow">BREAKMATCH Club: Social Media</span>
@@ -698,7 +713,6 @@ footer a:hover {color:var(--gold)}
   </div>
 </section>
 
-<!-- WEBSITE JOURNALISM -->
 <section class="pricing-section" id="website">
   <div class="section-heading">
     <span class="eyebrow">BREAKMATCH Club: Website</span>
@@ -804,9 +818,15 @@ footer a:hover {color:var(--gold)}
       <a class="card-button" href="enquiries.html">ENQUIRE ABOUT THIS SERVICE</a>
     </div>
   </div>
+
+  <div class="travel-panel">
+    <h3>Travel and Matchday Arrangements</h3>
+    <p>We aim to match clubs with contributors based within 15 miles (24 km) of home wherever possible. For local home fixtures, contributors will generally arrange their own transport; if additional travel support is needed, we'll discuss and agree this with the club in advance.</p>
+    <p>For away fixtures, we'll coordinate arrangements with the club beforehand. This may involve travelling with the team or an agreed contribution towards mileage or public transport costs.</p>
+    <p>Our aim is to keep things straightforward and transparent, with arrangements agreed before each assignment and contributors not left out of pocket for necessary, approved travel.</p>
+  </div>
 </section>
 
-<!-- PRESS -->
 <section class="pricing-section" id="press">
   <div class="section-heading">
     <span class="eyebrow">BREAKMATCH Press</span>
@@ -855,7 +875,6 @@ footer a:hover {color:var(--gold)}
   </div>
 </section>
 
-<!-- TRAINING ACADEMY -->
 <section class="pricing-section" id="academy">
   <div class="section-heading">
     <span class="eyebrow">BREAKMATCH Journalism Training</span>
